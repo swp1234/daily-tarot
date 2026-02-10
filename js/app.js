@@ -12,7 +12,11 @@ class DailyTarotApp {
 
     async init() {
         // Initialize i18n
-        await i18n.init();
+        try {
+            await i18n.init();
+        } catch (e) {
+            console.warn('i18n init failed:', e);
+        }
 
         // Load app state
         this.loadState();
@@ -21,7 +25,8 @@ class DailyTarotApp {
         this.setupEventListeners();
 
         // Hide loader
-        document.getElementById('app-loader').classList.add('hidden');
+        const loader = document.getElementById('app-loader');
+        if (loader) loader.classList.add('hidden');
 
         // Register service worker
         if ('serviceWorker' in navigator) {
