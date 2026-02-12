@@ -98,6 +98,22 @@ class DailyTarotApp {
 
         // Interstitial ad close
         document.getElementById('close-ad').addEventListener('click', () => this.closeInterstitialAd());
+
+        // Social share buttons
+        document.getElementById('shareTwitterBtn')?.addEventListener('click', () => {
+            const text = document.title + ' - ' + window.location.href;
+            window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text), '_blank');
+            if (typeof gtag !== 'undefined') gtag('event', 'share', { method: 'twitter' });
+        });
+
+        document.getElementById('shareUrlBtn')?.addEventListener('click', () => {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                const btn = document.getElementById('shareUrlBtn');
+                btn.textContent = '✅ Copied!';
+                setTimeout(() => { btn.innerHTML = '📋 Copy URL'; }, 2000);
+            });
+            if (typeof gtag !== 'undefined') gtag('event', 'share', { method: 'url_copy' });
+        });
     }
 
     switchTab(tabName) {
@@ -229,6 +245,14 @@ class DailyTarotApp {
             cards: this.currentCards,
             summary: summaryText
         };
+
+        // Show social share buttons
+        this.showShareButtons();
+    }
+
+    showShareButtons() {
+        const shareSection = document.getElementById('share-section');
+        if (shareSection) shareSection.style.display = 'flex';
     }
 
     generateSummaryMessage(meanings) {
@@ -328,6 +352,8 @@ class DailyTarotApp {
         document.getElementById('reading-result').classList.add('hidden');
         document.getElementById('premium-section').classList.add('hidden');
         document.querySelector('.reading-intro').classList.remove('hidden');
+        const shareSection = document.getElementById('share-section');
+        if (shareSection) shareSection.style.display = 'none';
     }
 
     selectCategory(category) {
