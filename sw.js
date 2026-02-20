@@ -1,6 +1,6 @@
 /* Service Worker - PWA Offline Support */
 
-const CACHE_NAME = 'daily-tarot-v1';
+const CACHE_NAME = 'daily-tarot-v2';
 const ASSETS_TO_CACHE = [
     '/',
     'index.html',

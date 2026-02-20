@@ -238,7 +238,7 @@ const TAROT_CARDS = [
                 tr: "Zayıflık, kontrol eksikliği, verimsizlik, otorite kaybı, tiranlık",
                 de: "Schwäche, mangelnde Kontrolle, Ineffizienz, Machtverlust, Tyrannei",
                 fr: "Faiblesse, manque de contrôle, inefficacité, perte d'autorité, tyrannie"
-            ]
+            }
         }
     },
     {
@@ -430,7 +430,7 @@ const TAROT_CARDS = [
                 tr: "Zayıflık, şüphe, korku, duyarlılık, yetersizlik",
                 de: "Schwäche, Zweifel, Angst, Anfälligkeit, Inkompetenz",
                 fr: "Faiblesse, doute, peur, susceptibilité, incompétence"
-            ]
+            }
         }
     },
     {
@@ -478,7 +478,7 @@ const TAROT_CARDS = [
                 tr: "İzolasyon, kaçışçılık, hapis, yalnızlık, bağlantı eksikliği",
                 de: "Isolation, Flucht, Haft, Einsamkeit, Mangel an Verbindung",
                 fr: "Isolement, escapisme, confinement, solitude, manque de connexion"
-            ]
+            }
         }
     },
     {
@@ -526,7 +526,7 @@ const TAROT_CARDS = [
                 tr: "Sefalet, kontrol edilemeyen değişim, kötü döngü, gecikme, çarpık kader",
                 de: "Unglück, unkontrollierbare Veränderung, böser Kreislauf, Verzögerung, verzerrtes Schicksal",
                 fr: "Malchance, changement incontrôlable, mauvais cycle, retard, destin déformé"
-            ]
+            }
         }
     },
     {
@@ -574,7 +574,7 @@ const TAROT_CARDS = [
                 tr: "Adaletsizlik, önyargı, dürüstlüksüzlük, dengesizlik, yasal sorun, yolsuzluk",
                 de: "Ungerechtigkeit, Voreingenommenheit, Unehrlichkeit, Unausgeglichenheit, Rechtsprobleme, Korruption",
                 fr: "Injustice, préjugé, malhonnêteté, déséquilibre, problèmes juridiques, corruption"
-            ]
+            }
         }
     },
     {
@@ -622,7 +622,7 @@ const TAROT_CARDS = [
                 tr: "Kurban vermeyi reddetme, bağlılık, durgunluk, anlamsız kurban, kişiye zarar verme",
                 de: "Verweigerung des Opfers, Bindung, Stagnation, sinnloses Opfer, Selbstverletzung",
                 fr: "Refus de sacrifier, attachement, stagnation, sacrifice vide de sens, automutilation"
-            ]
+            }
         }
     },
     {
@@ -670,7 +670,7 @@ const TAROT_CARDS = [
                 tr: "Direnç, inkar, gecikme, durgunluk, korku, bir şey bitmez",
                 de: "Widerstand, Verneinung, Verzögerung, Stagnation, Angst, etwas, das nicht endet",
                 fr: "Résistance, refus, retard, stagnation, peur, quelque chose qui ne finit pas"
-            ]
+            }
         }
     },
     {
@@ -718,7 +718,7 @@ const TAROT_CARDS = [
                 tr: "Dengesizlik, aşırılık, çatışma, uçlar, ılımlılık, kaos",
                 de: "Unausgeglichenheit, Übermaß, Konflikt, Extreme, Unmäßigkeit, Chaos",
                 fr: "Déséquilibre, excès, conflit, extrêmes, intempérance, chaos"
-            ]
+            }
         }
     },
     {
@@ -766,7 +766,7 @@ const TAROT_CARDS = [
                 tr: "Kurtuluş, özgürlük, gerçek bilinci, kontrolü geri kazanma",
                 de: "Befreiung, Freiheit, Wahrheitserkenntnis, Kontrolle zurückgewinnen",
                 fr: "Libération, liberté, réalisation de la vérité, reprise de contrôle"
-            ]
+            }
         }
     },
     {
@@ -814,7 +814,7 @@ const TAROT_CARDS = [
                 tr: "Kısmi çöküş, sorunu minimize etme, değişime direnme, gizli sorun",
                 de: "Teilweise Zerstörung, Probleminimierung, Widerstand gegen Veränderung, verstecktes Problem",
                 fr: "Effondrement partiel, minimisation du problème, résistance aux changements, problème caché"
-            ]
+            }
         }
     },
     {
@@ -862,7 +862,7 @@ const TAROT_CARDS = [
                 tr: "Umutsuzluk, şüphe, inanç kaybı, ilham eksikliği, karanlık gelecek",
                 de: "Verzweiflung, Zweifel, Glaubensverlust, Inspirationsmangel, düstere Zukunft",
                 fr: "Désespoir, doute, perte de foi, manque d'inspiration, avenir sombre"
-            ]
+            }
         }
     },
     {
@@ -910,7 +910,7 @@ const TAROT_CARDS = [
                 tr: "Netlik, gerçek ortaya çıkması, sezginin kaybı, sanrıdan uyanış, karışıklık giderilmesi",
                 de: "Klarheit, Wahrheitsenthüllung, Intuitionsverlust, Erwachen aus Illusion, Verwirrung geklärt",
                 fr: "Clarté, vérité révélée, perte d'intuition, réveil de l'illusion, confusion clarifiée"
-            ]
+            }
         }
     },
     {
@@ -958,7 +958,7 @@ const TAROT_CARDS = [
                 tr: "Hayal kırıklığı, üzüntü, zayıflık, olumsuzluk, gecikme, zorluk",
                 de: "Frustration, Traurigkeit, Schwäche, Negativität, Verzögerung, Mühsal",
                 fr: "Frustration, tristesse, faiblesse, négativité, retard, adversité"
-            ]
+            }
         }
     },
     {
@@ -1006,7 +1006,7 @@ const TAROT_CARDS = [
                 tr: "Kendine şüphe, yargılamayı reddetme, erteleme, kaçınma, gecikmeli uyanış",
                 de: "Selbstzweifel, Urteilsverweigerung, Aufschub, Vermeidung, verspätetes Erwachen",
                 fr: "Doute de soi, refus de juger, procrastination, évasion, réveil retardé"
-            ]
+            }
         }
     },
     {
@@ -1054,7 +1054,7 @@ const TAROT_CARDS = [
                 tr: "Eksiklik, gecikme, kusursuzluk, çatışma, ilerlemeye isteksizlik",
                 de: "Unvollständigkeit, Verzögerung, Unvollkommenheit, Konflikt, Unwillingness zum Weitermachen",
                 fr: "Inachèvement, retard, imperfection, conflit, réticence à avancer"
-            ]
+            }
         }
     }
 ];
