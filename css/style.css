@@ -67,6 +67,233 @@
     background: rgba(155, 89, 182, 0.1);
 }
 
+/* Light mode: title gradient - darker tones for readability */
+[data-theme="light"] .app-header h1 {
+    background: linear-gradient(135deg, #b8860b, #6c3483);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Light mode: tagline */
+[data-theme="light"] .app-header .tagline {
+    color: #555;
+}
+
+/* Light mode: tab buttons */
+[data-theme="light"] .tab-btn {
+    color: #555;
+}
+
+[data-theme="light"] .tab-btn:hover {
+    color: #b8860b;
+}
+
+[data-theme="light"] .tab-btn.active {
+    color: #fff;
+}
+
+/* Light mode: intro card text */
+[data-theme="light"] .intro-card h2 {
+    color: #8b6914;
+}
+
+[data-theme="light"] .intro-card .hint {
+    color: #555;
+}
+
+/* Light mode: card instruction */
+[data-theme="light"] .card-instruction h3 {
+    color: #8b6914;
+}
+
+[data-theme="light"] .card-instruction p {
+    color: #555;
+}
+
+/* Light mode: card label */
+[data-theme="light"] .card-label {
+    color: #555;
+}
+
+/* Light mode: result card heading */
+[data-theme="light"] .result-card h2 {
+    color: #8b6914;
+}
+
+/* Light mode: interpretation text */
+[data-theme="light"] .interpretation-position {
+    color: #666;
+}
+
+[data-theme="light"] .card-interpretation h4 {
+    color: #8b6914;
+}
+
+[data-theme="light"] .meaning-text {
+    color: #555;
+}
+
+[data-theme="light"] .card-direction {
+    background: rgba(155, 89, 182, 0.12);
+    color: #6c3483;
+}
+
+/* Light mode: summary section */
+[data-theme="light"] .summary-section {
+    background: rgba(155, 89, 182, 0.08);
+}
+
+[data-theme="light"] .summary-section h3 {
+    color: #8b6914;
+}
+
+[data-theme="light"] .summary-text {
+    color: #333;
+}
+
+/* Light mode: premium section */
+[data-theme="light"] .premium-badge {
+    color: #333;
+}
+
+[data-theme="light"] .premium-section h3,
+[data-theme="light"] .premium-result h3 {
+    color: #8b6914;
+}
+
+/* Light mode: AI analysis */
+[data-theme="light"] .analysis-title {
+    color: #8b6914;
+}
+
+[data-theme="light"] .analysis-text {
+    color: #555;
+}
+
+[data-theme="light"] .analysis-block {
+    background: #f0f0f5;
+}
+
+/* Light mode: advice list */
+[data-theme="light"] .advice-list li {
+    background: rgba(155, 89, 182, 0.06);
+    color: #333;
+}
+
+/* Light mode: category section */
+[data-theme="light"] .category-name {
+    color: #333;
+}
+
+[data-theme="light"] .category-card:hover {
+    background: rgba(155, 89, 182, 0.08);
+}
+
+/* Light mode: gallery */
+[data-theme="light"] .gallery-intro h2 {
+    color: #8b6914;
+}
+
+[data-theme="light"] .gallery-intro .hint {
+    color: #555;
+}
+
+[data-theme="light"] #detail-card-name {
+    color: #8b6914;
+}
+
+[data-theme="light"] .detail-meaning h4 {
+    color: #8b6914;
+}
+
+[data-theme="light"] .detail-meaning p {
+    color: #555;
+}
+
+/* Light mode: limit info badges */
+[data-theme="light"] .limit-text,
+[data-theme="light"] .limit-counter {
+    color: #6c3483;
+    background: rgba(155, 89, 182, 0.1);
+    border-color: #9b59b6;
+}
+
+/* Light mode: rec section */
+[data-theme="light"] .rec-title {
+    color: #8b6914;
+}
+
+[data-theme="light"] .rec-card {
+    color: #333;
+}
+
+[data-theme="light"] .rec-card:hover {
+    background: rgba(155, 89, 182, 0.08);
+}
+
+/* Light mode: primary button text always white on purple bg */
+[data-theme="light"] .primary-btn {
+    color: #fff;
+}
+
+/* Light mode: secondary button */
+[data-theme="light"] .secondary-btn {
+    color: #6c3483;
+    background: #f0f0f5;
+    border-color: rgba(155, 89, 182, 0.3);
+}
+
+[data-theme="light"] .secondary-btn:hover {
+    background: rgba(155, 89, 182, 0.15);
+}
+
+/* Light mode: premium button text dark on gold bg */
+[data-theme="light"] .premium-btn {
+    color: #333;
+}
+
+/* Light mode: footer link */
+[data-theme="light"] .back-link {
+    color: #6c3483;
+}
+
+/* Light mode: ad banner */
+[data-theme="light"] .ad-banner {
+    border-color: #ccc;
+    color: #999;
+}
+
+/* Light mode: interstitial */
+[data-theme="light"] .interstitial-content p {
+    color: #555;
+}
+
+[data-theme="light"] #countdown {
+    color: #8b6914;
+}
+
+/* Light mode: stars and cosmic bg hidden */
+[data-theme="light"] .stars,
+[data-theme="light"] .cosmic-bg {
+    opacity: 0;
+}
+
+/* Light mode: lang menu shadow */
+[data-theme="light"] .lang-menu {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Light mode: category result text */
+[data-theme="light"] .result-text {
+    color: #333;
+}
+
+/* Light mode: category header title */
+[data-theme="light"] #category-title {
+    color: #8b6914;
+}
+
 /* ============================================================ */
 /* RESET & BASE STYLES */
 /* ============================================================ */
