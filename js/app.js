@@ -30,6 +30,14 @@ class DailyTarotApp {
             console.warn('i18n init failed:', e);
         }
 
+        // Restore theme from localStorage
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            const btn = document.getElementById('theme-toggle');
+            if (btn) btn.textContent = savedTheme === 'light' ? '🌙' : '☀️';
+        }
+
         // Load app state
         this.loadState();
 

@@ -94,6 +94,9 @@
     <link rel="icon" href="icon-192.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="icon-192.svg">
 
+    <!-- Restore theme before render to prevent FOUC -->
+    <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+
     <!-- Critical CSS async loading -->
     <link rel="stylesheet" href="css/style.css">
     <noscript><link rel="stylesheet" href="css/style.css"></noscript>
