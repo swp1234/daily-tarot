@@ -77,6 +77,13 @@
   "recommendations": {
     "title": "Anda juga mungkin menyukai"
   },
+  "relatedTests": {
+    "title": "Tes Terkait",
+    "numerology": "Numerologi",
+    "zodiacMatch": "Kecocokan Zodiak",
+    "fortuneCookie": "Kue Keberuntungan",
+    "auraReading": "Pembacaan Aura"
+  },
   "game": {
     "back": "Kembali ke DopaBrain"
   },

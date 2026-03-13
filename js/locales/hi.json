@@ -77,6 +77,13 @@
   "recommendations": {
     "title": "आपको भी पसंद आ सकता है"
   },
+  "relatedTests": {
+    "title": "संबंधित परीक्षण",
+    "numerology": "अंक ज्योतिष",
+    "zodiacMatch": "राशि मिलान",
+    "fortuneCookie": "फॉर्च्यून कुकी",
+    "auraReading": "ऑरा रीडिंग"
+  },
   "game": {
     "back": "DopaBrain पर वापस जाएं"
   },

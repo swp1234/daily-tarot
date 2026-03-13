@@ -424,15 +424,26 @@
         </div>
     </div>
 
-    <!-- Related Apps (SEO Internal Links) -->
-    <section class="related-games" style="margin:20px auto;padding:16px;max-width:480px;background:rgba(255,255,255,0.05);border-radius:12px;">
-      <p style="font-size:13px;color:#aaa;margin:0 0 8px 0;font-weight:600;">More Free Tests</p>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;">
-        <a href="/fortune-cookie/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">🥠 Fortune Cookie</a>
-        <a href="/zodiac-match/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">♈ Zodiac Match</a>
-        <a href="/numerology/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">🔢 Numerology</a>
-        <a href="/dream-fortune/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">💤 Dream Fortune</a>
-        <a href="/aura-reading/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">🔮 Aura Reading</a>
+    <!-- Related Tests Cross-Promo -->
+    <section class="related-tests" aria-label="Related tests">
+      <h3 class="related-tests__title" data-i18n="relatedTests.title">Related Tests</h3>
+      <div class="related-tests__grid">
+        <a href="/numerology/" class="related-tests__card" style="--card-color:#9b59b6">
+          <span class="related-tests__icon">🔢</span>
+          <span class="related-tests__name" data-i18n="relatedTests.numerology">Numerology</span>
+        </a>
+        <a href="/zodiac-match/" class="related-tests__card" style="--card-color:#e74c3c">
+          <span class="related-tests__icon">♈</span>
+          <span class="related-tests__name" data-i18n="relatedTests.zodiacMatch">Zodiac Match</span>
+        </a>
+        <a href="/fortune-cookie/" class="related-tests__card" style="--card-color:#f39c12">
+          <span class="related-tests__icon">🥠</span>
+          <span class="related-tests__name" data-i18n="relatedTests.fortuneCookie">Fortune Cookie</span>
+        </a>
+        <a href="/aura-reading/" class="related-tests__card" style="--card-color:#8e44ad">
+          <span class="related-tests__icon">🔮</span>
+          <span class="related-tests__name" data-i18n="relatedTests.auraReading">Aura Reading</span>
+        </a>
       </div>
     </section>
 

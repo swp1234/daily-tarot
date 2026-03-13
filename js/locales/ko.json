@@ -77,6 +77,13 @@
   "recommendations": {
     "title": "이것도 해보세요"
   },
+  "relatedTests": {
+    "title": "관련 테스트",
+    "numerology": "수비학",
+    "zodiacMatch": "별자리 궁합",
+    "fortuneCookie": "포춘 쿠키",
+    "auraReading": "오라 리딩"
+  },
   "game": {
     "back": "돌아가기"
   },

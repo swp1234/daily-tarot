@@ -77,6 +77,13 @@
   "recommendations": {
     "title": "Vous aimerez peut-être aussi"
   },
+  "relatedTests": {
+    "title": "Tests Associés",
+    "numerology": "Numérologie",
+    "zodiacMatch": "Compatibilité Zodiacale",
+    "fortuneCookie": "Biscuit de Fortune",
+    "auraReading": "Lecture d'Aura"
+  },
   "game": {
     "back": "Retour à DopaBrain"
   },

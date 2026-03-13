@@ -77,6 +77,13 @@
   "recommendations": {
     "title": "Вам также может понравиться"
   },
+  "relatedTests": {
+    "title": "Похожие тесты",
+    "numerology": "Нумерология",
+    "zodiacMatch": "Совместимость знаков",
+    "fortuneCookie": "Печенье удачи",
+    "auraReading": "Чтение ауры"
+  },
   "game": {
     "back": "Вернуться в DopaBrain"
   },

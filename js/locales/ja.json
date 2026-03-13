@@ -77,6 +77,13 @@
   "recommendations": {
     "title": "こちらもおすすめ"
   },
+  "relatedTests": {
+    "title": "関連テスト",
+    "numerology": "数秘術",
+    "zodiacMatch": "星座相性",
+    "fortuneCookie": "フォーチュンクッキー",
+    "auraReading": "オーラリーディング"
+  },
   "game": {
     "back": "DopaBrainに戻る"
   },

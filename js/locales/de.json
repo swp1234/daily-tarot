@@ -77,6 +77,13 @@
   "recommendations": {
     "title": "Das könnte Ihnen auch gefallen"
   },
+  "relatedTests": {
+    "title": "Verwandte Tests",
+    "numerology": "Numerologie",
+    "zodiacMatch": "Sternzeichen-Match",
+    "fortuneCookie": "Glückskeks",
+    "auraReading": "Aura-Lesung"
+  },
   "game": {
     "back": "Zurück zu DopaBrain"
   },

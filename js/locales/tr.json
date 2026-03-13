@@ -77,6 +77,13 @@
   "recommendations": {
     "title": "Bunu da sevebilirsiniz"
   },
+  "relatedTests": {
+    "title": "İlgili Testler",
+    "numerology": "Numeroloji",
+    "zodiacMatch": "Burç Uyumu",
+    "fortuneCookie": "Şans Kurabiyesi",
+    "auraReading": "Aura Okuma"
+  },
   "game": {
     "back": "DopaBrain'e Dön"
   },
