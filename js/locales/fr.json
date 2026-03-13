@@ -106,5 +106,18 @@
     "result2": "La Lune -- Mystère et Intuition",
     "result3": "Le Soleil -- Joie et Succès",
     "result4": "La Tour -- Transformation et Éveil"
+  },
+  "about": {
+    "whatIsTitle": "Qu'est-ce que le tirage quotidien du tarot ?",
+    "whatIsDesc": "Le tirage quotidien du tarot consiste à tirer des cartes chaque jour pour obtenir des conseils et une réflexion personnelle. Un tirage de 3 cartes des 22 Arcanes Majeurs révèle les influences du passé, du présent et de l'avenir.",
+    "whatIs1": "22 cartes des Arcanes Majeurs avec significations droites et inversées",
+    "whatIs2": "Tirage de 3 cartes : Passé, Présent, Futur",
+    "whatIs3": "Analyse approfondie par IA pour des aperçus détaillés",
+    "guideTitle": "Comment lire les cartes de tarot",
+    "guideDesc": "La lecture du tarot est une pratique ancestrale utilisant des cartes symboliques pour l'introspection. Chaque carte porte un symbolisme unique qui change selon sa position et son orientation.",
+    "guide1": "Concentrez-vous sur une question spécifique avant de tirer",
+    "guide2": "Cartes droites : énergie active ; inversées : réflexion",
+    "guide3": "La position de la carte ajoute du contexte à la signification",
+    "guide4": "Un tirage quotidien est recommandé pour de meilleurs résultats"
   }
 }

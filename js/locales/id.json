@@ -106,5 +106,18 @@
     "result2": "Bulan -- Misteri & Intuisi",
     "result3": "Matahari -- Kebahagiaan & Kesuksesan",
     "result4": "Menara -- Transformasi & Kebangkitan"
+  },
+  "about": {
+    "whatIsTitle": "Apa itu Pembacaan Tarot Harian?",
+    "whatIsDesc": "Pembacaan tarot harian adalah praktik menarik kartu tarot setiap hari untuk panduan dan refleksi diri. Spread 3 kartu dari 22 Major Arcana mengungkap pengaruh masa lalu, saat ini, dan masa depan.",
+    "whatIs1": "22 kartu Major Arcana dengan makna tegak dan terbalik",
+    "whatIs2": "Spread 3 kartu: Masa Lalu, Saat Ini, Masa Depan",
+    "whatIs3": "Analisis pembacaan mendalam AI untuk wawasan detail",
+    "guideTitle": "Cara Membaca Kartu Tarot",
+    "guideDesc": "Pembacaan tarot adalah praktik kuno menggunakan kartu simbolis untuk introspeksi. Setiap kartu memiliki simbolisme unik.",
+    "guide1": "Fokus pada pertanyaan spesifik sebelum menarik",
+    "guide2": "Kartu tegak: energi aktif; terbalik: refleksi",
+    "guide3": "Posisi kartu menambah konteks pada makna",
+    "guide4": "Satu pembacaan harian direkomendasikan untuk hasil terbaik"
   }
 }

@@ -106,5 +106,18 @@
     "result2": "The Moon -- Mystery & Intuition",
     "result3": "The Sun -- Joy & Success",
     "result4": "The Tower -- Transformation & Awakening"
+  },
+  "about": {
+    "whatIsTitle": "What Is Daily Tarot Reading?",
+    "whatIsDesc": "Daily tarot reading is the practice of drawing tarot cards each day for guidance, self-reflection, and personal insight. Using the 22 Major Arcana cards, a 3-card spread reveals influences from your past, present situation, and future direction. This free online tool also offers category-specific readings for love, money, health, and personal growth.",
+    "whatIs1": "22 Major Arcana cards with upright and reversed meanings",
+    "whatIs2": "3-card spread: Past, Present, Future",
+    "whatIs3": "AI deep reading analysis for detailed insights",
+    "guideTitle": "How to Read Tarot Cards",
+    "guideDesc": "Tarot reading is an ancient practice of using symbolic cards for introspection and guidance. Each card carries unique symbolism and meaning that changes based on its position and orientation. Focus on your question before drawing, and trust your intuition when interpreting the cards. Remember, tarot is a tool for self-awareness, not fortune-telling.",
+    "guide1": "Focus on a specific question or area of life before drawing",
+    "guide2": "Upright cards suggest active energy; reversed cards suggest reflection",
+    "guide3": "The card positions (past/present/future) add context to meanings",
+    "guide4": "One daily reading is recommended for best results"
   }
 }

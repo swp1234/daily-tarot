@@ -106,5 +106,18 @@
     "result2": "La Luna -- Misterio e Intuición",
     "result3": "El Sol -- Alegría y Éxito",
     "result4": "La Torre -- Transformación y Despertar"
+  },
+  "about": {
+    "whatIsTitle": "Que es la lectura diaria del tarot?",
+    "whatIsDesc": "La lectura diaria del tarot es la practica de sacar cartas cada dia para orientacion y reflexion. Una tirada de 3 cartas de los 22 Arcanos Mayores revela influencias del pasado, presente y futuro.",
+    "whatIs1": "22 cartas de Arcanos Mayores con significados al derecho y al reves",
+    "whatIs2": "Tirada de 3 cartas: Pasado, Presente, Futuro",
+    "whatIs3": "Analisis profundo con IA para perspectivas detalladas",
+    "guideTitle": "Como leer las cartas del tarot",
+    "guideDesc": "La lectura del tarot es una practica ancestral de cartas simbolicas para la introspeccion. Cada carta tiene simbolismo unico.",
+    "guide1": "Concentrate en una pregunta especifica antes de sacar",
+    "guide2": "Cartas al derecho: energia activa; al reves: reflexion",
+    "guide3": "La posicion de la carta agrega contexto al significado",
+    "guide4": "Se recomienda una lectura diaria para mejores resultados"
   }
 }

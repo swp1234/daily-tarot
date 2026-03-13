@@ -106,5 +106,18 @@
     "result2": "Ay -- Gizem ve Sezgi",
     "result3": "Güneş -- Neşe ve Başarı",
     "result4": "Kule -- Dönüşüm ve Uyanış"
+  },
+  "about": {
+    "whatIsTitle": "Günlük Tarot Okuması Nedir?",
+    "whatIsDesc": "Günlük tarot okuması, her gün rehberlik ve öz-düşünce için tarot kartları çekme pratiğidir. 22 Büyük Arkana kartının 3 kartlık açılımı geçmiş, şimdiki ve gelecekteki etkileri ortaya koyar.",
+    "whatIs1": "Düz ve ters anlamlı 22 Büyük Arkana kartı",
+    "whatIs2": "3 kartlık açılım: Geçmiş, Şimdi, Gelecek",
+    "whatIs3": "Ayrıntılı içgörüler için AI derin okuma analizi",
+    "guideTitle": "Tarot Kartları Nasıl Okunur",
+    "guideDesc": "Tarot okuması, iç gözlem ve rehberlik için sembolik kartlar kullanan kadim bir pratiktir. Her kart pozisyon ve yönüne göre değişen benzersiz sembolizm taşır.",
+    "guide1": "Çekmeden önce belirli bir soruya odaklanın",
+    "guide2": "Düz kartlar aktif enerji; ters kartlar düşünme önerir",
+    "guide3": "Kart pozisyonu anlama bağlam ekler",
+    "guide4": "En iyi sonuçlar için günde bir okuma önerilir"
   }
 }

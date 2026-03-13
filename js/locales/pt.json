@@ -106,5 +106,18 @@
     "result2": "A Lua -- Mistério e Intuição",
     "result3": "O Sol -- Alegria e Sucesso",
     "result4": "A Torre -- Transformação e Despertar"
+  },
+  "about": {
+    "whatIsTitle": "O que e leitura diaria de taro?",
+    "whatIsDesc": "A leitura diaria de taro e a pratica de tirar cartas todos os dias para orientacao e autorreflexao. Uma tiragem de 3 cartas dos 22 Arcanos Maiores revela influencias do passado, presente e futuro.",
+    "whatIs1": "22 cartas de Arcanos Maiores com significados normal e invertido",
+    "whatIs2": "Tiragem de 3 cartas: Passado, Presente, Futuro",
+    "whatIs3": "Analise profunda com IA para insights detalhados",
+    "guideTitle": "Como ler cartas de taro",
+    "guideDesc": "A leitura de taro e uma pratica ancestral de cartas simbolicas para introspecao. Cada carta tem simbolismo unico.",
+    "guide1": "Concentre-se em uma pergunta especifica antes de tirar",
+    "guide2": "Cartas normais: energia ativa; invertidas: reflexao",
+    "guide3": "A posicao da carta adiciona contexto ao significado",
+    "guide4": "Uma leitura diaria e recomendada para melhores resultados"
   }
 }

@@ -106,5 +106,18 @@
     "result2": "Der Mond -- Geheimnis & Intuition",
     "result3": "Die Sonne -- Freude & Erfolg",
     "result4": "Der Turm -- Transformation & Erwachen"
+  },
+  "about": {
+    "whatIsTitle": "Was ist taegliches Tarot-Lesen?",
+    "whatIsDesc": "Taegliches Tarot-Lesen ist die Praxis, jeden Tag Karten zu ziehen fuer Orientierung und Selbstreflexion. Ein 3-Karten-Spread der 22 Grossen Arkana zeigt Einfluesse aus Vergangenheit, Gegenwart und Zukunft.",
+    "whatIs1": "22 Grosse Arkana-Karten mit aufrechter und umgekehrter Bedeutung",
+    "whatIs2": "3-Karten-Spread: Vergangenheit, Gegenwart, Zukunft",
+    "whatIs3": "KI-Tiefenanalyse fuer detaillierte Einblicke",
+    "guideTitle": "Wie man Tarotkarten liest",
+    "guideDesc": "Tarot-Lesen ist eine uralte Praxis symbolischer Karten fuer Introspektion. Jede Karte traegt einzigartige Symbolik.",
+    "guide1": "Konzentrieren Sie sich vor dem Ziehen auf eine bestimmte Frage",
+    "guide2": "Aufrechte Karten: aktive Energie; umgekehrte: Reflexion",
+    "guide3": "Die Kartenposition fuegt Kontext zur Bedeutung hinzu",
+    "guide4": "Eine taegliche Lesung wird fuer beste Ergebnisse empfohlen"
   }
 }

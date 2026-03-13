@@ -98,6 +98,70 @@
 }
     </script>
 
+    <!-- BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dopabrain.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Tests", "item": "https://dopabrain.com/portal/" },
+            { "@type": "ListItem", "position": 3, "name": "Fortune Tests", "item": "https://dopabrain.com/portal/" },
+            { "@type": "ListItem", "position": 4, "name": "Daily Tarot", "item": "https://dopabrain.com/daily-tarot/" }
+        ]
+    }
+    </script>
+
+    <!-- FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is daily tarot reading?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Daily tarot reading is a practice of drawing tarot cards each day for guidance and self-reflection. This free online version uses a 3-card spread (past, present, future) from the 22 Major Arcana cards to provide insights about your day, relationships, and personal growth."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I interpret tarot cards?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Each tarot card has upright and reversed meanings. The position in the spread matters too: the first card represents your past influences, the second your present situation, and the third your future direction. Trust your intuition when reading the interpretations provided."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is tarot reading accurate?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tarot reading is a tool for self-reflection and introspection rather than predicting the future. The cards serve as mirrors for your subconscious thoughts and feelings, helping you gain new perspectives on your life situations. Results are for entertainment and personal insight."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How often should I do a tarot reading?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most tarot practitioners recommend one daily reading to maintain focus and avoid information overload. A single daily draw allows you to reflect on the message throughout the day. This app offers one free daily reading to encourage mindful practice."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the difference between Major and Minor Arcana?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The Major Arcana consists of 22 cards representing significant life themes and spiritual lessons (like The Fool, The Lovers, The World). The Minor Arcana has 56 cards dealing with day-to-day events. This app focuses on the 22 Major Arcana cards for deeper, more meaningful daily readings."
+                }
+            }
+        ]
+    }
+    </script>
+
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="icon-192.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="icon-192.svg">
@@ -447,6 +511,33 @@
             <button id="close-ad" class="close-btn"><span data-i18n="ads.close">Close</span> (<span id="countdown">5</span>)</button>
         </div>
     </div>
+
+    <!-- About Section (SEO) -->
+    <section style="max-width:520px;margin:24px auto;padding:0 16px;" id="about-tarot">
+        <details style="background:rgba(155,89,182,0.08);border:1px solid rgba(155,89,182,0.2);border-radius:12px;margin-bottom:12px;overflow:hidden;">
+            <summary style="padding:16px 20px;cursor:pointer;font-weight:700;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;" data-i18n="about.whatIsTitle">What Is Daily Tarot Reading?</summary>
+            <div style="padding:0 20px 16px;font-size:14px;line-height:1.7;opacity:0.8;">
+                <p data-i18n="about.whatIsDesc">Daily tarot reading is the practice of drawing tarot cards each day for guidance, self-reflection, and personal insight. Using the 22 Major Arcana cards, a 3-card spread reveals influences from your past, present situation, and future direction. This free online tool also offers category-specific readings for love, money, health, and personal growth.</p>
+                <ul style="margin-top:8px;padding-left:20px;">
+                    <li data-i18n="about.whatIs1">22 Major Arcana cards with upright and reversed meanings</li>
+                    <li data-i18n="about.whatIs2">3-card spread: Past, Present, Future</li>
+                    <li data-i18n="about.whatIs3">AI deep reading analysis for detailed insights</li>
+                </ul>
+            </div>
+        </details>
+        <details style="background:rgba(155,89,182,0.08);border:1px solid rgba(155,89,182,0.2);border-radius:12px;overflow:hidden;">
+            <summary style="padding:16px 20px;cursor:pointer;font-weight:700;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;" data-i18n="about.guideTitle">How to Read Tarot Cards</summary>
+            <div style="padding:0 20px 16px;font-size:14px;line-height:1.7;opacity:0.8;">
+                <p data-i18n="about.guideDesc">Tarot reading is an ancient practice of using symbolic cards for introspection and guidance. Each card carries unique symbolism and meaning that changes based on its position and orientation. Focus on your question before drawing, and trust your intuition when interpreting the cards. Remember, tarot is a tool for self-awareness, not fortune-telling.</p>
+                <ul style="margin-top:8px;padding-left:20px;">
+                    <li data-i18n="about.guide1">Focus on a specific question or area of life before drawing</li>
+                    <li data-i18n="about.guide2">Upright cards suggest active energy; reversed cards suggest reflection</li>
+                    <li data-i18n="about.guide3">The card positions (past/present/future) add context to meanings</li>
+                    <li data-i18n="about.guide4">One daily reading is recommended for best results</li>
+                </ul>
+            </div>
+        </details>
+    </section>
 
     <!-- Related Tests Cross-Promo -->
     <section class="related-tests" aria-label="Related tests">
