@@ -98,5 +98,13 @@
     "audio": "Audio nicht verfügbar. Sie können fortfahren.",
     "network": "Bitte Verbindung prüfen und erneut versuchen.",
     "general": "Etwas ist schiefgelaufen. Bitte aktualisieren oder erneut versuchen."
+  },
+  "engage": {
+    "cta": "Ziehe jetzt deine Karten",
+    "proof": "Lesungen heute durchgeführt",
+    "result1": "Der Stern -- Hoffnung & Inspiration",
+    "result2": "Der Mond -- Geheimnis & Intuition",
+    "result3": "Die Sonne -- Freude & Erfolg",
+    "result4": "Der Turm -- Transformation & Erwachen"
   }
 }

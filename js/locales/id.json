@@ -98,5 +98,13 @@
     "audio": "Audio tidak tersedia. Anda dapat melanjutkan.",
     "network": "Periksa koneksi Anda dan coba lagi.",
     "general": "Terjadi kesalahan. Muat ulang atau coba lagi."
+  },
+  "engage": {
+    "cta": "Tarik kartumu sekarang",
+    "proof": "pembacaan dilakukan hari ini",
+    "result1": "Bintang -- Harapan & Inspirasi",
+    "result2": "Bulan -- Misteri & Intuisi",
+    "result3": "Matahari -- Kebahagiaan & Kesuksesan",
+    "result4": "Menara -- Transformasi & Kebangkitan"
   }
 }

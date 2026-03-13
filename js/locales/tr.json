@@ -98,5 +98,13 @@
     "audio": "Ses kullanılamıyor. Devam edebilirsiniz.",
     "network": "Bağlantınızı kontrol edip tekrar deneyin.",
     "general": "Bir şeyler ters gitti. Yenileyip tekrar deneyin."
+  },
+  "engage": {
+    "cta": "Şimdi kartlarını çek",
+    "proof": "okuma bugün yapıldı",
+    "result1": "Yıldız -- Umut ve İlham",
+    "result2": "Ay -- Gizem ve Sezgi",
+    "result3": "Güneş -- Neşe ve Başarı",
+    "result4": "Kule -- Dönüşüm ve Uyanış"
   }
 }

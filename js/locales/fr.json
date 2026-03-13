@@ -98,5 +98,13 @@
     "audio": "Audio indisponible. Vous pouvez continuer.",
     "network": "Vérifiez votre connexion et réessayez.",
     "general": "Un problème est survenu. Rafraîchissez ou réessayez."
+  },
+  "engage": {
+    "cta": "Tirez vos cartes maintenant",
+    "proof": "lectures effectuées aujourd'hui",
+    "result1": "L'Étoile -- Espoir et Inspiration",
+    "result2": "La Lune -- Mystère et Intuition",
+    "result3": "Le Soleil -- Joie et Succès",
+    "result4": "La Tour -- Transformation et Éveil"
   }
 }

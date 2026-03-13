@@ -181,18 +181,42 @@
             <section id="reading-tab" class="tab-content active">
                 <div class="reading-intro">
                     <div class="intro-card">
+                        <!-- Hero: Floating Tarot Card -->
+                        <div class="hero-tarot-card">
+                            <div class="card-flip">
+                                <div class="card-face card-front">&#127183;</div>
+                                <div class="card-face card-back-face">&#11088;</div>
+                            </div>
+                        </div>
+
                         <h2 data-i18n="reading.title">Today's Tarot Reading</h2>
                         <p class="hint" data-i18n="reading.hint">Focus on your question and draw three cards: Past, Present, Future</p>
+
+                        <!-- Result Preview Carousel -->
+                        <div class="result-carousel" aria-live="polite">
+                            <div class="carousel-track">
+                                <div class="carousel-item" data-i18n="engage.result1">The Star -- Hope & Inspiration</div>
+                                <div class="carousel-item" data-i18n="engage.result2">The Moon -- Mystery & Intuition</div>
+                                <div class="carousel-item" data-i18n="engage.result3">The Sun -- Joy & Success</div>
+                                <div class="carousel-item" data-i18n="engage.result4">The Tower -- Transformation & Awakening</div>
+                            </div>
+                        </div>
+
+                        <!-- Social Proof Badge -->
+                        <div class="social-proof-badge" style="display:flex;justify-content:center;">
+                            <span class="badge-count">54,000+</span>
+                            <span class="badge-label" data-i18n="engage.proof">readings performed today</span>
+                        </div>
 
                         <!-- Daily limit info -->
                         <div class="limit-info">
                             <span class="limit-text" data-i18n="reading.freeDaily">1 free reading per day</span>
-                            <span class="limit-counter" id="limit-counter">✓ Available today</span>
+                            <span class="limit-counter" id="limit-counter">&#10003; Available today</span>
                         </div>
 
                         <button class="primary-btn pulse-glow" id="start-reading-btn">
-                            <span class="btn-icon">✨</span>
-                            <span data-i18n="reading.startBtn">Start Reading</span>
+                            <span class="btn-icon">&#10024;</span>
+                            <span data-i18n="engage.cta">Draw Your Cards Now</span>
                         </button>
                     </div>
                 </div>

@@ -98,5 +98,13 @@
     "audio": "Audio unavailable. You can still continue.",
     "network": "Please check your connection and try again.",
     "general": "Something went wrong. Please refresh or try again."
+  },
+  "engage": {
+    "cta": "Draw Your Cards Now",
+    "proof": "readings performed today",
+    "result1": "The Star -- Hope & Inspiration",
+    "result2": "The Moon -- Mystery & Intuition",
+    "result3": "The Sun -- Joy & Success",
+    "result4": "The Tower -- Transformation & Awakening"
   }
 }

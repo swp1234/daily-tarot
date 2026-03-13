@@ -98,5 +98,13 @@
     "audio": "Audio no disponible. Puede continuar.",
     "network": "Verifique su conexión e inténtelo de nuevo.",
     "general": "Algo salió mal. Actualice o inténtelo de nuevo."
+  },
+  "engage": {
+    "cta": "Saca tus cartas ahora",
+    "proof": "lecturas realizadas hoy",
+    "result1": "La Estrella -- Esperanza e Inspiración",
+    "result2": "La Luna -- Misterio e Intuición",
+    "result3": "El Sol -- Alegría y Éxito",
+    "result4": "La Torre -- Transformación y Despertar"
   }
 }
