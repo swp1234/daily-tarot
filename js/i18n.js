@@ -5,10 +5,19 @@ class I18n {
         this.translations = {};
         this.supportedLanguages = ['ko', 'en', 'zh', 'ja', 'hi', 'ru', 'es', 'pt', 'id', 'tr', 'de', 'fr'];
         this.currentLang = this.detectLanguage();
+        document.documentElement.lang = this.currentLang;
         this.initialized = false;
     }
 
     detectLanguage() {
+        try {
+            const params = new URLSearchParams(window.location.search || '');
+            const urlLang = params.get('lang');
+            if (urlLang && this.supportedLanguages.includes(urlLang)) {
+                return urlLang;
+            }
+        } catch (error) {}
+
         // Check localStorage first
         const saved = localStorage.getItem('selectedLanguage');
         if (saved && this.supportedLanguages.includes(saved)) {
