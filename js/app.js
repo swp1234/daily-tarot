@@ -9,6 +9,21 @@ class DailyTarotApp {
         this.lastReadingDate = null;
         this.shareData = null;
         this._engagementFired = false;
+        this.resultAdLoaded = false;
+        this.activeEntryMode = 'manual';
+        this.activeAutoDraw = false;
+        this.entryParams = new URLSearchParams(window.location.search || '');
+        this.entrySurface = this.entryParams.get('surface') || this.entryParams.get('utm_content') || 'direct';
+    }
+
+    track(eventName, params = {}) {
+        if (typeof gtag === 'function') {
+            gtag('event', eventName, {
+                event_category: 'daily_tarot',
+                entry_surface: this.entrySurface,
+                ...params
+            });
+        }
     }
 
     /**
@@ -17,9 +32,49 @@ class DailyTarotApp {
     _fireEngagement() {
         if (this._engagementFired) return;
         this._engagementFired = true;
-        if (typeof gtag === 'function') {
-            gtag('event', 'engagement', { event_category: 'daily_tarot', event_label: 'first_interaction' });
+        this.track('engagement', { event_label: 'first_interaction' });
+    }
+
+    isParamEnabled(name) {
+        const value = (this.entryParams.get(name) || '').toLowerCase();
+        return ['1', 'true', 'yes', 'on', 'auto'].includes(value);
+    }
+
+    currentLanguage() {
+        if (typeof i18n !== 'undefined' && typeof i18n.getCurrentLanguage === 'function') {
+            return i18n.getCurrentLanguage();
         }
+        return 'en';
+    }
+
+    localized(map, fallback = '') {
+        if (!map || typeof map !== 'object') return fallback;
+        const lang = this.currentLanguage();
+        return map[lang] || map.en || map.ko || map.zh ||
+            Object.values(map).find(value => typeof value === 'string' && value.trim()) ||
+            fallback;
+    }
+
+    cardMeaning(card, direction = 'upright') {
+        return this.localized(card?.meanings?.[direction], this.localized(card?.meanings?.upright, ''));
+    }
+
+    maybeAutoStart() {
+        if (!this.isParamEnabled('start')) return;
+
+        const autoDraw = this.isParamEnabled('autoDraw') || this.isParamEnabled('draw');
+        this.track('daily_tarot_auto_start', {
+            event_label: autoDraw ? 'auto_draw_requested' : 'start_requested',
+            auto_draw: autoDraw ? 'true' : 'false'
+        });
+
+        window.setTimeout(() => {
+            this.startReading({
+                trigger: 'auto_start',
+                autoDraw,
+                silentIfUsed: true
+            });
+        }, 350);
     }
 
     async init() {
@@ -49,11 +104,13 @@ class DailyTarotApp {
         if (loader) loader.classList.add('hidden');
 
         // Register service worker
-        if ('serviceWorker' in navigator) {
+        if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
             navigator.serviceWorker.register('sw.js').catch(err =>
                 console.log('SW registration failed:', err)
             );
         }
+
+        this.maybeAutoStart();
     }
 
     loadState() {
@@ -103,7 +160,7 @@ class DailyTarotApp {
         });
 
         // Reading tab
-        document.getElementById('start-reading-btn').addEventListener('click', () => this.startReading());
+        document.getElementById('start-reading-btn').addEventListener('click', () => this.startReading({ trigger: 'manual' }));
         document.getElementById('share-reading').addEventListener('click', () => this.shareReading());
         document.getElementById('deep-reading-btn').addEventListener('click', () => this.showDeepReading());
         document.getElementById('new-reading-btn').addEventListener('click', () => this.resetReading());
@@ -179,17 +236,30 @@ class DailyTarotApp {
         });
     }
 
-    startReading() {
+    startReading(options = {}) {
         this._fireEngagement();
         // Check daily limit
         if (this.dailyReadingUsed) {
+            if (options.silentIfUsed) {
+                this.track('daily_tarot_auto_start_blocked', {
+                    event_label: 'daily_limit'
+                });
+                return false;
+            }
             alert(i18n.t('reading.limitReached', 'You have used your daily free reading. Watch an ad for another reading?'));
             // Could implement ad watching here
-            return;
+            return false;
         }
 
         this.dailyReadingUsed = true;
         this.saveState();
+        this.resultAdLoaded = false;
+        this.activeEntryMode = options.trigger || 'manual';
+        this.activeAutoDraw = Boolean(options.autoDraw);
+        this.track('tarot_start', {
+            event_label: this.activeEntryMode,
+            auto_draw: this.activeAutoDraw ? 'true' : 'false'
+        });
 
         // Hide intro, show card drawing area
         document.querySelector('.reading-intro').classList.add('hidden');
@@ -197,15 +267,40 @@ class DailyTarotApp {
         document.getElementById('reading-result').classList.add('hidden');
 
         // Clear previous cards
-        this.currentCards = [];
+        this.currentCards = new Array(3).fill(null);
 
         // Setup card back clicking
         document.querySelectorAll('.card-back').forEach((cardBack, index) => {
-            cardBack.addEventListener('click', () => this.drawCard(index, cardBack));
+            cardBack.classList.remove('flipped');
+            cardBack.style.pointerEvents = 'auto';
+            cardBack.onclick = () => this.drawCard(index, cardBack);
+        });
+
+        if (this.activeAutoDraw) {
+            this.queueAutoDraw();
+        }
+
+        return true;
+    }
+
+    queueAutoDraw() {
+        const cardBacks = Array.from(document.querySelectorAll('.card-back'));
+        this.track('daily_tarot_auto_draw', {
+            event_label: 'queued',
+            card_count: cardBacks.length
+        });
+        cardBacks.forEach((cardBack, index) => {
+            window.setTimeout(() => {
+                if (!this.currentCards[index]) {
+                    this.drawCard(index, cardBack);
+                }
+            }, 500 + (index * 450));
         });
     }
 
     async drawCard(position, cardBackEl) {
+        if (this.currentCards[position]) return;
+
         // Disable clicking after card is drawn
         cardBackEl.style.pointerEvents = 'none';
 
@@ -217,10 +312,15 @@ class DailyTarotApp {
         const isReversed = Math.random() > 0.5;
 
         // Store card
-        this.currentCards.push({
+        this.currentCards[position] = {
             position,
             card,
             reversed: isReversed
+        };
+        this.track('tarot_card_draw', {
+            event_label: `card_${position + 1}`,
+            direction: isReversed ? 'reversed' : 'upright',
+            entry_mode: this.activeEntryMode
         });
 
         // Display card on front
@@ -233,7 +333,7 @@ class DailyTarotApp {
         }, 300);
 
         // When all 3 cards drawn, show results
-        if (this.currentCards.length === 3) {
+        if (this.currentCards.filter(Boolean).length === 3) {
             setTimeout(() => this.displayReadingResult(), 500);
         }
     }
@@ -244,19 +344,20 @@ class DailyTarotApp {
 
         // Display each card's interpretation
         let summaryMessages = [];
-        this.currentCards.forEach((cardData, index) => {
+        const drawnCards = this.currentCards.filter(Boolean);
+        drawnCards.forEach((cardData, index) => {
             const card = cardData.card;
-            const meaning = cardData.reversed ?
-                card.meanings.reversed[i18n.getCurrentLanguage()] :
-                card.meanings.upright[i18n.getCurrentLanguage()];
+            const direction = cardData.reversed ? 'reversed' : 'upright';
+            const meaning = this.cardMeaning(card, direction);
+            const cardName = this.localized(card.name, 'Tarot Card');
 
-            document.getElementById(`result-name-${index}`).textContent = card.name[i18n.getCurrentLanguage()];
+            document.getElementById(`result-name-${index}`).textContent = cardName;
             document.getElementById(`result-card-${index}`).textContent = card.emoji;
             document.getElementById(`result-meaning-${index}`).textContent = meaning;
             document.getElementById(`result-direction-${index}`).textContent =
                 cardData.reversed ? (i18n.t('reading.reversed') || '(Reversed)') : (i18n.t('reading.upright') || '(Upright)');
 
-            summaryMessages.push(`${card.name[i18n.getCurrentLanguage()]}: ${meaning}`);
+            summaryMessages.push(`${cardName}: ${meaning}`);
         });
 
         // Generate summary message
@@ -266,12 +367,43 @@ class DailyTarotApp {
         // Store for sharing
         this.shareData = {
             type: 'reading',
-            cards: this.currentCards,
+            cards: drawnCards,
             summary: summaryText
         };
 
         // Show social share buttons
         this.showShareButtons();
+        this.loadResultAd();
+        this.track('result_view', {
+            event_label: this.activeEntryMode,
+            auto_draw: this.activeAutoDraw ? 'true' : 'false',
+            card_count: drawnCards.length
+        });
+        this.track('daily_tarot_result_view', {
+            event_label: this.activeEntryMode,
+            auto_draw: this.activeAutoDraw ? 'true' : 'false',
+            card_count: drawnCards.length
+        });
+    }
+
+    loadResultAd() {
+        if (this.resultAdLoaded) return;
+
+        const adSlot = document.querySelector('[data-ad-surface="daily_tarot_result_ad"]');
+        const adNode = adSlot?.querySelector('.adsbygoogle');
+        if (!adSlot || !adNode) return;
+
+        try {
+            (window.adsbygoogle = window.adsbygoogle || []).push({});
+            this.resultAdLoaded = true;
+            adSlot.dataset.loaded = 'true';
+            this.track('daily_tarot_result_ad_impression', {
+                event_label: this.activeEntryMode,
+                ad_slot: adNode.getAttribute('data-ad-slot') || 'auto'
+            });
+        } catch (error) {
+            console.warn('Daily Tarot result ad failed to load:', error);
+        }
     }
 
     showShareButtons() {
@@ -307,8 +439,8 @@ class DailyTarotApp {
     generateDeepReading() {
         if (!this.currentCards || this.currentCards.length !== 3) return;
 
-        const cards = this.currentCards.map(c => c.card);
-        const lang = i18n.getCurrentLanguage();
+        const cards = this.currentCards.filter(Boolean).map(c => c.card);
+        const lang = this.currentLanguage();
 
         // Generate AI-like insights
         const patterns = this.generatePatterns(cards, lang);
@@ -371,6 +503,9 @@ class DailyTarotApp {
 
     resetReading() {
         this.currentCards = [];
+        this.resultAdLoaded = false;
+        this.activeEntryMode = 'manual';
+        this.activeAutoDraw = false;
         this.shareData = null;
         document.getElementById('card-area').classList.add('hidden');
         document.getElementById('reading-result').classList.add('hidden');
@@ -394,7 +529,7 @@ class DailyTarotApp {
         };
 
         const info = categoryInfo[category];
-        const lang = i18n.getCurrentLanguage();
+        const lang = this.currentLanguage();
         const categoryKey = `category.${category}`;
         const categoryTitle = i18n.t(categoryKey, 'Category Reading');
 
@@ -406,7 +541,7 @@ class DailyTarotApp {
         // Display cards
         cards.forEach((card, index) => {
             const el = document.getElementById(`cat-card-${index}`);
-            el.innerHTML = `<div style="font-size: 2.5rem; text-align: center; margin-bottom: 0.5rem;">${card.emoji}</div><strong>${card.name[lang]}</strong><p>${card.meanings.upright[lang]}</p>`;
+            el.innerHTML = `<div style="font-size: 2.5rem; text-align: center; margin-bottom: 0.5rem;">${card.emoji}</div><strong>${this.localized(card.name, 'Tarot Card')}</strong><p>${this.cardMeaning(card, 'upright')}</p>`;
         });
 
         // Generate interpretation
@@ -430,7 +565,7 @@ class DailyTarotApp {
             category === 'health' ? 'Health' : 'Personal'
         );
 
-        const meanings = cards.map(c => c.meanings.upright[lang]).join(', ');
+        const meanings = cards.map(c => this.cardMeaning(c, 'upright')).join(', ');
         const guidanceLabel = i18n.t('reading.summary', 'Guidance');
         return `${categoryName} ${guidanceLabel}: ${meanings}`;
     }
@@ -469,12 +604,12 @@ class DailyTarotApp {
     }
 
     showCardDetail(card) {
-        const lang = i18n.getCurrentLanguage();
+        const lang = this.currentLanguage();
         document.getElementById('card-detail').classList.remove('hidden');
         document.getElementById('detail-card-display').textContent = card.emoji;
-        document.getElementById('detail-card-name').textContent = card.name[lang];
-        document.getElementById('detail-meaning-upright').textContent = card.meanings.upright[lang];
-        document.getElementById('detail-meaning-reversed').textContent = card.meanings.reversed[lang];
+        document.getElementById('detail-card-name').textContent = this.localized(card.name, 'Tarot Card');
+        document.getElementById('detail-meaning-upright').textContent = this.cardMeaning(card, 'upright');
+        document.getElementById('detail-meaning-reversed').textContent = this.cardMeaning(card, 'reversed');
     }
 
     closeCardDetail() {

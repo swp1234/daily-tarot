@@ -50,7 +50,10 @@ class I18n {
             this.translations[lang] = data;
             return data;
         } catch (error) {
-            console.error(`Error loading ${lang} translations:`, error);
+            const isFileProtocol = typeof window !== 'undefined' && window.location?.protocol === 'file:';
+            if (!isFileProtocol) {
+                console.warn(`Error loading ${lang} translations:`, error);
+            }
             if (lang !== 'en') {
                 return this.loadTranslations('en');
             }

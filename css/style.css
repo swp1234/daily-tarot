@@ -1042,6 +1042,19 @@ button {
     font-size: 0.95rem;
 }
 
+.result-inline-ad {
+    min-height: 120px;
+    margin: 1.5rem 0;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px dashed var(--glass-border);
+    border-radius: var(--radius-md);
+}
+
+.result-inline-ad .adsbygoogle {
+    min-height: 100px;
+}
+
 .premium-section {
     background: var(--surface);
     padding: 1.5rem;

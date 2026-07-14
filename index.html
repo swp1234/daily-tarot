@@ -13,7 +13,7 @@
 
     <title>Daily Tarot Reading - Free 3-Card Spread | DopaBrain</title>
     <meta name="description" content="Draw from 22 Major Arcana tarot cards for your daily reading. 3-card spread (past/present/future), love/money/health fortunes, and AI deep reading. Play free!">
-    <meta name="dateModified" content="2026-07-07">
+    <meta name="dateModified" content="2026-07-15">
     <meta name="theme-color" content="#9b59b6">
     <meta name="keywords" content="타로 카드, 오늘의 운세, 타로 점, 카드 뽑기, 메이저 아르카나, 운세 카드, AI 타로, 무료 타로, 신비로운 카드">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3600813755953882" crossorigin="anonymous"></script>
@@ -371,6 +371,15 @@
                         <p id="reading-summary" class="summary-text"></p>
                     </div>
 
+                    <div class="result-inline-ad" data-ad-surface="daily_tarot_result_ad" data-loaded="false" aria-label="Sponsored">
+                        <ins class="adsbygoogle"
+                             style="display:block"
+                             data-ad-client="ca-pub-3600813755953882"
+                             data-ad-slot="auto"
+                             data-ad-format="auto"
+                             data-full-width-responsive="true"></ins>
+                    </div>
+
                     <!-- Premium Deep Reading -->
                     <div class="premium-section hidden" id="premium-section">
                         <div class="premium-badge" data-i18n="premium.badge">✨ AI Deep Reading</div>
@@ -575,7 +584,7 @@
 
     <!-- Service Worker registration -->
     <script>
-        if ('serviceWorker' in navigator) {
+        if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('sw.js')
                     .then(registration => console.log('Service Worker registered'))
