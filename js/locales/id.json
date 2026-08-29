@@ -26,7 +26,7 @@
     "summary": "Pesan Hari Ini",
     "share": "Bagikan",
     "newReading": "Bacaan Baru",
-    "limitReached": "Anda telah menggunakan bacaan gratis harian Anda. Tonton iklan untuk bacaan lagi?",
+    "limitReached": "Bacaan harian Anda sudah tersimpan. Jelajahi kategori atau galeri kartu untuk sudut pandang lain.",
     "copiedToClipboard": "Disalin ke papan klip!",
     "summaryTemplate": "Masa lalu: {past}\n\nMasa kini: {present}\n\nMasa depan: {future}\n\nHari Anda penuh dengan pesan mistis. Renungkan makna setiap kartu.",
     "reversed": "(Terbalik)",
@@ -62,17 +62,12 @@
     ]
   },
   "premium": {
-    "badge": "✨ Bacaan Mendalam AI",
-    "title": "Analisis Tarot Mendalam AI",
-    "deepReading": "Bacaan Mendalam",
+    "badge": "✨ Refleksi lebih dalam",
+    "title": "Refleksi tarot terpandu",
+    "deepReading": "Refleksi lebih dalam",
     "patterns": "Pola dan Wawasan",
     "guidance": "Panduan",
     "advice": "Item Tindakan"
-  },
-  "ads": {
-    "banner": "Area iklan",
-    "interstitial": "Iklan",
-    "close": "Tutup"
   },
   "recommendations": {
     "title": "Anda juga mungkin menyukai"
@@ -101,7 +96,6 @@
   },
   "engage": {
     "cta": "Tarik kartumu sekarang",
-    "proof": "pembacaan dilakukan hari ini",
     "result1": "Bintang -- Harapan & Inspirasi",
     "result2": "Bulan -- Misteri & Intuisi",
     "result3": "Matahari -- Kebahagiaan & Kesuksesan",
@@ -112,7 +106,7 @@
     "whatIsDesc": "Pembacaan tarot harian adalah praktik menarik kartu tarot setiap hari untuk panduan dan refleksi diri. Spread 3 kartu dari 22 Major Arcana mengungkap pengaruh masa lalu, saat ini, dan masa depan.",
     "whatIs1": "22 kartu Major Arcana dengan makna tegak dan terbalik",
     "whatIs2": "Spread 3 kartu: Masa Lalu, Saat Ini, Masa Depan",
-    "whatIs3": "Analisis pembacaan mendalam AI untuk wawasan detail",
+    "whatIs3": "Pertanyaan terpandu untuk melihat kartu lebih dekat",
     "guideTitle": "Cara Membaca Kartu Tarot",
     "guideDesc": "Pembacaan tarot adalah praktik kuno menggunakan kartu simbolis untuk introspeksi. Setiap kartu memiliki simbolisme unik.",
     "guide1": "Fokus pada pertanyaan spesifik sebelum menarik",

@@ -26,7 +26,7 @@
     "summary": "Heutige Botschaft",
     "share": "Teilen",
     "newReading": "Neue Lesung",
-    "limitReached": "Sie haben Ihre kostenlose Tageslesung verwendet. Möchten Sie eine Anzeige ansehen, um noch eine Lesung zu erhalten?",
+    "limitReached": "Ihre Tageslegung ist bereits gespeichert. Erkunden Sie eine Kategorie oder die Galerie für eine andere Perspektive.",
     "copiedToClipboard": "In die Zwischenablage kopiert!",
     "summaryTemplate": "Vergangenheit: {past}\n\nGegenwart: {present}\n\nZukunft: {future}\n\nIhr Tag ist voller mystischer Botschaften. Denken Sie tief über die Bedeutung jeder Karte nach.",
     "reversed": "(Umgekehrt)",
@@ -62,17 +62,12 @@
     ]
   },
   "premium": {
-    "badge": "✨ AI Tiefe Lesung",
-    "title": "AI Tiefe Tarot-Analyse",
-    "deepReading": "Tiefe Lesung",
+    "badge": "✨ Vertiefte Reflexion",
+    "title": "Geführte Tarot-Reflexion",
+    "deepReading": "Vertiefte Reflexion",
     "patterns": "Muster und Erkenntnisse",
     "guidance": "Anleitung",
     "advice": "Aktionselemente"
-  },
-  "ads": {
-    "banner": "Anzeigenbereich",
-    "interstitial": "Anzeige",
-    "close": "Schließen"
   },
   "recommendations": {
     "title": "Das könnte Ihnen auch gefallen"
@@ -101,7 +96,6 @@
   },
   "engage": {
     "cta": "Ziehe jetzt deine Karten",
-    "proof": "Lesungen heute durchgeführt",
     "result1": "Der Stern -- Hoffnung & Inspiration",
     "result2": "Der Mond -- Geheimnis & Intuition",
     "result3": "Die Sonne -- Freude & Erfolg",
@@ -112,7 +106,7 @@
     "whatIsDesc": "Taegliches Tarot-Lesen ist die Praxis, jeden Tag Karten zu ziehen fuer Orientierung und Selbstreflexion. Ein 3-Karten-Spread der 22 Grossen Arkana zeigt Einfluesse aus Vergangenheit, Gegenwart und Zukunft.",
     "whatIs1": "22 Grosse Arkana-Karten mit aufrechter und umgekehrter Bedeutung",
     "whatIs2": "3-Karten-Spread: Vergangenheit, Gegenwart, Zukunft",
-    "whatIs3": "KI-Tiefenanalyse fuer detaillierte Einblicke",
+    "whatIs3": "Geführte Impulse für einen genaueren Blick auf die Karten",
     "guideTitle": "Wie man Tarotkarten liest",
     "guideDesc": "Tarot-Lesen ist eine uralte Praxis symbolischer Karten fuer Introspektion. Jede Karte traegt einzigartige Symbolik.",
     "guide1": "Konzentrieren Sie sich vor dem Ziehen auf eine bestimmte Frage",

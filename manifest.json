@@ -1,7 +1,7 @@
 {
   "name": "Daily Tarot Reading - Mystical Card Readings",
   "short_name": "Daily Tarot",
-  "description": "22 Major Arcana tarot cards - 3-card spread readings, AI deep analysis, daily guidance",
+  "description": "22 Major Arcana tarot cards with a 3-card spread and guided daily reflection",
   "start_url": "/daily-tarot/",
   "scope": "/daily-tarot/",
   "display": "standalone",

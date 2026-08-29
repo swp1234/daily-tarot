@@ -26,7 +26,7 @@
     "summary": "Message d'Aujourd'hui",
     "share": "Partager",
     "newReading": "Nouvelle Lecture",
-    "limitReached": "Vous avez utilisé votre lecture gratuite quotidienne. Regarder une publicité pour une autre lecture ?",
+    "limitReached": "Votre lecture du jour est déjà enregistrée. Explorez une catégorie ou la galerie pour un autre regard.",
     "copiedToClipboard": "Copié dans le presse-papiers !",
     "summaryTemplate": "Passé: {past}\n\nPrésent: {present}\n\nAvenir: {future}\n\nVotre jour est rempli de messages mystiques. Réfléchissez profondément au sens de chaque carte.",
     "reversed": "(Renversée)",
@@ -62,17 +62,12 @@
     ]
   },
   "premium": {
-    "badge": "✨ Lecture Profonde IA",
-    "title": "Analyse Profonde du Tarot IA",
-    "deepReading": "Lecture Profonde",
+    "badge": "✨ Réflexion approfondie",
+    "title": "Réflexion guidée du tarot",
+    "deepReading": "Réflexion approfondie",
     "patterns": "Modèles et Perspectives",
     "guidance": "Orientation",
     "advice": "Éléments d'Action"
-  },
-  "ads": {
-    "banner": "Zone de publicité",
-    "interstitial": "Publicité",
-    "close": "Fermer"
   },
   "recommendations": {
     "title": "Vous aimerez peut-être aussi"
@@ -101,7 +96,6 @@
   },
   "engage": {
     "cta": "Tirez vos cartes maintenant",
-    "proof": "lectures effectuées aujourd'hui",
     "result1": "L'Étoile -- Espoir et Inspiration",
     "result2": "La Lune -- Mystère et Intuition",
     "result3": "Le Soleil -- Joie et Succès",
@@ -112,7 +106,7 @@
     "whatIsDesc": "Le tirage quotidien du tarot consiste à tirer des cartes chaque jour pour obtenir des conseils et une réflexion personnelle. Un tirage de 3 cartes des 22 Arcanes Majeurs révèle les influences du passé, du présent et de l'avenir.",
     "whatIs1": "22 cartes des Arcanes Majeurs avec significations droites et inversées",
     "whatIs2": "Tirage de 3 cartes : Passé, Présent, Futur",
-    "whatIs3": "Analyse approfondie par IA pour des aperçus détaillés",
+    "whatIs3": "Des pistes guidées pour approfondir les cartes",
     "guideTitle": "Comment lire les cartes de tarot",
     "guideDesc": "La lecture du tarot est une pratique ancestrale utilisant des cartes symboliques pour l'introspection. Chaque carte porte un symbolisme unique qui change selon sa position et son orientation.",
     "guide1": "Concentrez-vous sur une question spécifique avant de tirer",

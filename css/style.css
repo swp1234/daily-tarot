@@ -150,7 +150,7 @@
     color: #8b6914;
 }
 
-/* Light mode: AI analysis */
+/* Light mode: guided reflection */
 [data-theme="light"] .analysis-title {
     color: #8b6914;
 }
@@ -244,21 +244,6 @@
 /* Light mode: footer link */
 [data-theme="light"] .back-link {
     color: #6c3483;
-}
-
-/* Light mode: ad banner */
-[data-theme="light"] .ad-banner {
-    border-color: #ccc;
-    color: #999;
-}
-
-/* Light mode: interstitial */
-[data-theme="light"] .interstitial-content p {
-    color: #555;
-}
-
-[data-theme="light"] #countdown {
-    color: #8b6914;
 }
 
 /* Light mode: stars and cosmic bg hidden */
@@ -1042,19 +1027,6 @@ button {
     font-size: 0.95rem;
 }
 
-.result-inline-ad {
-    min-height: 120px;
-    margin: 1.5rem 0;
-    padding: 0.5rem;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px dashed var(--glass-border);
-    border-radius: var(--radius-md);
-}
-
-.result-inline-ad .adsbygoogle {
-    min-height: 100px;
-}
-
 .premium-section {
     background: var(--surface);
     padding: 1.5rem;
@@ -1091,10 +1063,10 @@ button {
 }
 
 /* ============================================================ */
-/* AI ANALYSIS */
+/* GUIDED REFLECTION */
 /* ============================================================ */
 
-.ai-analysis {
+.reflection-analysis {
     margin: 1.5rem 0;
 }
 
@@ -1529,86 +1501,6 @@ button {
 }
 
 /* ============================================================ */
-/* AD BANNERS */
-/* ============================================================ */
-
-.ad-banner {
-    margin: 1rem 0;
-    min-height: 100px;
-    background: var(--surface);
-    border: 1px dashed var(--text-secondary);
-    border-radius: var(--radius-md);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-}
-
-.ad-placeholder,
-.ad-placeholder-large {
-    color: var(--text-secondary);
-    text-align: center;
-}
-
-/* ============================================================ */
-/* INTERSTITIAL AD */
-/* ============================================================ */
-
-.interstitial-ad {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2000;
-    padding: 1rem;
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.3s, visibility 0.3s;
-}
-
-.interstitial-ad.hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-}
-
-.interstitial-content {
-    background: var(--surface);
-    border: 2px solid var(--accent-gold);
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-    max-width: 90%;
-    position: relative;
-    text-align: center;
-}
-
-.interstitial-content p {
-    color: var(--text-secondary);
-    margin-bottom: 1rem;
-}
-
-.ad-placeholder-large {
-    min-height: 250px;
-    background: rgba(155, 89, 182, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: var(--radius-md);
-    margin: 1.5rem 0;
-}
-
-#countdown {
-    font-weight: bold;
-    color: var(--accent-gold);
-}
-
-/* ============================================================ */
 /* ACCESSIBILITY */
 /* ============================================================ */
 
@@ -1741,9 +1633,7 @@ a:focus-visible {
 
 @media print {
     .theme-toggle,
-    .lang-btn,
-    .ad-banner,
-    .interstitial-ad {
+    .lang-btn {
         display: none;
     }
 
@@ -1846,35 +1736,6 @@ a:focus-visible {
     50%, 70% { transform: translateY(-104px); }
     75%, 95% { transform: translateY(-156px); }
     100% { transform: translateY(0); }
-}
-
-/* ===== ENGAGEMENT: Social Proof Badge ===== */
-.social-proof-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: linear-gradient(135deg, rgba(155, 89, 182, 0.2), rgba(232, 197, 71, 0.1));
-    border: 1px solid rgba(155, 89, 182, 0.3);
-    border-radius: 50px;
-    padding: 12px 24px;
-    margin: 12px auto;
-    animation: proofPulse 3s ease-in-out infinite;
-}
-.social-proof-badge .badge-count {
-    font-size: 20px;
-    font-weight: 800;
-    background: linear-gradient(135deg, #9b59b6, #e8c547);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-.social-proof-badge .badge-label {
-    font-size: 13px;
-    color: var(--text-secondary, #a0a0b8);
-}
-@keyframes proofPulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(155, 89, 182, 0.2); }
-    50% { box-shadow: 0 0 0 8px rgba(155, 89, 182, 0); }
 }
 
 /* Accessibility: reduce motion for users who prefer it */

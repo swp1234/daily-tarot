@@ -5,11 +5,9 @@ class DailyTarotApp {
         this.currentCards = [];
         this.selectedCategory = null;
         this.dailyReadingUsed = false;
-        this.adWatchedForDeepReading = false;
         this.lastReadingDate = null;
         this.shareData = null;
         this._engagementFired = false;
-        this.resultAdLoaded = false;
         this.activeEntryMode = 'manual';
         this.activeAutoDraw = false;
         this.entryParams = new URLSearchParams(window.location.search || '');
@@ -176,9 +174,6 @@ class DailyTarotApp {
         this.populateGallery();
         document.getElementById('close-detail').addEventListener('click', () => this.closeCardDetail());
 
-        // Interstitial ad close
-        document.getElementById('close-ad').addEventListener('click', () => this.closeInterstitialAd());
-
         // Social share buttons
         document.getElementById('shareTwitterBtn')?.addEventListener('click', () => {
             const text = document.title + ' - ' + window.location.href;
@@ -246,14 +241,12 @@ class DailyTarotApp {
                 });
                 return false;
             }
-            alert(i18n.t('reading.limitReached', 'You have used your daily free reading. Watch an ad for another reading?'));
-            // Could implement ad watching here
+            alert(i18n.t('reading.limitReached', 'Your daily reading is already saved. Explore a category or the card gallery for another perspective.'));
             return false;
         }
 
         this.dailyReadingUsed = true;
         this.saveState();
-        this.resultAdLoaded = false;
         this.activeEntryMode = options.trigger || 'manual';
         this.activeAutoDraw = Boolean(options.autoDraw);
         this.track('tarot_start', {
@@ -373,7 +366,6 @@ class DailyTarotApp {
 
         // Show social share buttons
         this.showShareButtons();
-        this.loadResultAd();
         this.track('result_view', {
             event_label: this.activeEntryMode,
             auto_draw: this.activeAutoDraw ? 'true' : 'false',
@@ -384,26 +376,6 @@ class DailyTarotApp {
             auto_draw: this.activeAutoDraw ? 'true' : 'false',
             card_count: drawnCards.length
         });
-    }
-
-    loadResultAd() {
-        if (this.resultAdLoaded) return;
-
-        const adSlot = document.querySelector('[data-ad-surface="daily_tarot_result_ad"]');
-        const adNode = adSlot?.querySelector('.adsbygoogle');
-        if (!adSlot || !adNode) return;
-
-        try {
-            (window.adsbygoogle = window.adsbygoogle || []).push({});
-            this.resultAdLoaded = true;
-            adSlot.dataset.loaded = 'true';
-            this.track('daily_tarot_result_ad_impression', {
-                event_label: this.activeEntryMode,
-                ad_slot: adNode.getAttribute('data-ad-slot') || 'auto'
-            });
-        } catch (error) {
-            console.warn('Daily Tarot result ad failed to load:', error);
-        }
     }
 
     showShareButtons() {
@@ -426,11 +398,9 @@ class DailyTarotApp {
         const section = document.getElementById('premium-section');
 
         if (section.classList.contains('hidden')) {
-            // Show ad first
-            this.showInterstitialAd(() => {
-                section.classList.remove('hidden');
-                this.generateDeepReading();
-            });
+            section.classList.remove('hidden');
+            this.generateDeepReading();
+            this.track('daily_tarot_reflection_view', { event_label: this.activeEntryMode });
         } else {
             section.classList.add('hidden');
         }
@@ -442,15 +412,15 @@ class DailyTarotApp {
         const cards = this.currentCards.filter(Boolean).map(c => c.card);
         const lang = this.currentLanguage();
 
-        // Generate AI-like insights
+        // Generate deterministic reflection prompts from the selected cards.
         const patterns = this.generatePatterns(cards, lang);
         const guidance = this.generateGuidance(cards, lang);
         const advice = this.generateAdvice(cards, lang);
 
-        document.getElementById('ai-patterns').textContent = patterns;
-        document.getElementById('ai-guidance').textContent = guidance;
+        document.getElementById('reflection-patterns').textContent = patterns;
+        document.getElementById('reflection-guidance').textContent = guidance;
 
-        const adviceList = document.getElementById('ai-advice');
+        const adviceList = document.getElementById('reflection-advice');
         adviceList.innerHTML = '';
         advice.forEach(item => {
             const li = document.createElement('li');
@@ -503,7 +473,6 @@ class DailyTarotApp {
 
     resetReading() {
         this.currentCards = [];
-        this.resultAdLoaded = false;
         this.activeEntryMode = 'manual';
         this.activeAutoDraw = false;
         this.shareData = null;
@@ -616,25 +585,6 @@ class DailyTarotApp {
         document.getElementById('card-detail').classList.add('hidden');
     }
 
-    showInterstitialAd(callback) {
-        document.getElementById('interstitial-ad').classList.remove('hidden');
-        let countdown = 5;
-
-        const interval = setInterval(() => {
-            document.getElementById('countdown').textContent = countdown;
-            countdown--;
-
-            if (countdown < 0) {
-                clearInterval(interval);
-                this.closeInterstitialAd();
-                if (callback) callback();
-            }
-        }, 1000);
-    }
-
-    closeInterstitialAd() {
-        document.getElementById('interstitial-ad').classList.add('hidden');
-    }
 }
 
 // Initialize app when DOM is ready

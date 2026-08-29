@@ -26,7 +26,7 @@
     "summary": "今日信息",
     "share": "分享运势",
     "newReading": "新运势",
-    "limitReached": "你已使用今日免费运势。观看广告获取额外运势？",
+    "limitReached": "今日的牌阵已保存。你可以探索主题分类或牌卡图鉴，换一个角度思考。",
     "copiedToClipboard": "已复制到剪贴板！",
     "summaryTemplate": "过去: {past}\n\n现在: {present}\n\n未来: {future}\n\n你的今天充满了神秘的信息。深入思考每张卡片的含义。",
     "reversed": "(逆位)",
@@ -62,17 +62,12 @@
     ]
   },
   "premium": {
-    "badge": "✨ 人工智能深度阅读",
-    "title": "人工智能深度塔罗分析",
-    "deepReading": "深度阅读",
+    "badge": "✨ 深度反思",
+    "title": "引导式塔罗反思",
+    "deepReading": "深度反思",
     "patterns": "模式与洞察",
     "guidance": "指导",
     "advice": "行动项目"
-  },
-  "ads": {
-    "banner": "广告区域",
-    "interstitial": "广告",
-    "close": "关闭"
   },
   "recommendations": {
     "title": "你可能也会喜欢"
@@ -101,7 +96,6 @@
   },
   "engage": {
     "cta": "现在抽取你的牌",
-    "proof": "次阅读已完成",
     "result1": "星星 -- 希望与灵感",
     "result2": "月亮 -- 神秘与直觉",
     "result3": "太阳 -- 喜悦与成功",
@@ -112,7 +106,7 @@
     "whatIsDesc": "每日塔罗牌阅读是每天抽取塔罗牌以获得指导和自我反思的练习。使用22张大阿尔卡纳牌的3牌阵揭示过去、现在和未来的影响。",
     "whatIs1": "22张大阿尔卡纳牌，含正位和逆位含义",
     "whatIs2": "3牌阵：过去、现在、未来",
-    "whatIs3": "AI深度解读分析，提供详细洞察",
+    "whatIs3": "帮助你进一步观察牌面的引导问题",
     "guideTitle": "如何解读塔罗牌",
     "guideDesc": "塔罗牌阅读是使用象征性卡牌进行内省和指导的古老实践。抽牌前专注于你的问题，相信你的直觉。",
     "guide1": "抽牌前专注于特定问题或生活领域",

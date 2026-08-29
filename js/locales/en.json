@@ -26,7 +26,7 @@
     "summary": "Today's Message",
     "share": "Share Reading",
     "newReading": "New Reading",
-    "limitReached": "You have used your daily free reading. Watch an ad for another reading?",
+    "limitReached": "Your daily reading is already saved. Explore a category or the card gallery for another perspective.",
     "copiedToClipboard": "Copied to clipboard!",
     "summaryTemplate": "Past: {past}\n\nPresent: {present}\n\nFuture: {future}\n\nYour day is filled with mystical messages. Reflect on the meaning of each card.",
     "reversed": "(Reversed)",
@@ -62,17 +62,12 @@
     ]
   },
   "premium": {
-    "badge": "✨ AI Deep Reading",
-    "title": "AI Deep Tarot Analysis",
-    "deepReading": "AI Deep Reading",
+    "badge": "✨ Deeper Reflection",
+    "title": "Guided Tarot Reflection",
+    "deepReading": "Deeper Reflection",
     "patterns": "Patterns & Insights",
     "guidance": "Guidance",
     "advice": "Action Items"
-  },
-  "ads": {
-    "banner": "Ad area",
-    "interstitial": "Advertisement",
-    "close": "Close"
   },
   "recommendations": {
     "title": "You might also like"
@@ -101,7 +96,6 @@
   },
   "engage": {
     "cta": "Draw Your Cards Now",
-    "proof": "readings performed today",
     "result1": "The Star -- Hope & Inspiration",
     "result2": "The Moon -- Mystery & Intuition",
     "result3": "The Sun -- Joy & Success",
@@ -112,7 +106,7 @@
     "whatIsDesc": "Daily tarot reading is the practice of drawing tarot cards each day for guidance, self-reflection, and personal insight. Using the 22 Major Arcana cards, a 3-card spread reveals influences from your past, present situation, and future direction. This free online tool also offers category-specific readings for love, money, health, and personal growth.",
     "whatIs1": "22 Major Arcana cards with upright and reversed meanings",
     "whatIs2": "3-card spread: Past, Present, Future",
-    "whatIs3": "AI deep reading analysis for detailed insights",
+    "whatIs3": "Guided reflection prompts for a closer look",
     "guideTitle": "How to Read Tarot Cards",
     "guideDesc": "Tarot reading is an ancient practice of using symbolic cards for introspection and guidance. Each card carries unique symbolism and meaning that changes based on its position and orientation. Focus on your question before drawing, and trust your intuition when interpreting the cards. Remember, tarot is a tool for self-awareness, not fortune-telling.",
     "guide1": "Focus on a specific question or area of life before drawing",

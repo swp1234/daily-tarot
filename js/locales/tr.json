@@ -26,7 +26,7 @@
     "summary": "Bugünün Mesajı",
     "share": "Paylaş",
     "newReading": "Yeni Okuyuş",
-    "limitReached": "Günlük ücretsiz okuyuşunuzu kullandınız. Başka bir okuyuş için reklam izlemek ister misiniz?",
+    "limitReached": "Günlük açılımınız zaten kaydedildi. Farklı bir bakış için bir kategoriye veya kart galerisine göz atın.",
     "copiedToClipboard": "Panoya kopyalandı!",
     "summaryTemplate": "Geçmiş: {past}\n\nŞimdi: {present}\n\nGelecek: {future}\n\nGünün mistik mesajlarla dolu. Her kartın anlamını derin düşün.",
     "reversed": "(Ters)",
@@ -62,17 +62,12 @@
     ]
   },
   "premium": {
-    "badge": "✨ AI Derin Okuyuş",
-    "title": "AI Derin Tarot Analizi",
-    "deepReading": "Derin Okuyuş",
+    "badge": "✨ Daha derin düşünme",
+    "title": "Rehberli tarot düşünmesi",
+    "deepReading": "Daha derin düşünme",
     "patterns": "Desenler ve İçgörüler",
     "guidance": "Rehberlik",
     "advice": "İşlem Öğeleri"
-  },
-  "ads": {
-    "banner": "Reklam alanı",
-    "interstitial": "Reklam",
-    "close": "Kapat"
   },
   "recommendations": {
     "title": "Bunu da sevebilirsiniz"
@@ -101,7 +96,6 @@
   },
   "engage": {
     "cta": "Şimdi kartlarını çek",
-    "proof": "okuma bugün yapıldı",
     "result1": "Yıldız -- Umut ve İlham",
     "result2": "Ay -- Gizem ve Sezgi",
     "result3": "Güneş -- Neşe ve Başarı",
@@ -112,7 +106,7 @@
     "whatIsDesc": "Günlük tarot okuması, her gün rehberlik ve öz-düşünce için tarot kartları çekme pratiğidir. 22 Büyük Arkana kartının 3 kartlık açılımı geçmiş, şimdiki ve gelecekteki etkileri ortaya koyar.",
     "whatIs1": "Düz ve ters anlamlı 22 Büyük Arkana kartı",
     "whatIs2": "3 kartlık açılım: Geçmiş, Şimdi, Gelecek",
-    "whatIs3": "Ayrıntılı içgörüler için AI derin okuma analizi",
+    "whatIs3": "Kartlara daha yakından bakmak için rehberli sorular",
     "guideTitle": "Tarot Kartları Nasıl Okunur",
     "guideDesc": "Tarot okuması, iç gözlem ve rehberlik için sembolik kartlar kullanan kadim bir pratiktir. Her kart pozisyon ve yönüne göre değişen benzersiz sembolizm taşır.",
     "guide1": "Çekmeden önce belirli bir soruya odaklanın",

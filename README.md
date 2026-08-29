@@ -4,18 +4,18 @@
 
 ## 프로젝트 개요
 
-Daily Tarot는 22장의 메이저 아르카나 타로 카드를 이용한 일일 운세 앱입니다. 3장 카드 스프레드(과거/현재/미래), 카테고리별 운세(러브/금전/건강), 그리고 AI 심층 리딩을 제공합니다.
+Daily Tarot는 22장의 메이저 아르카나 타로 카드를 이용한 자기성찰용 일일 카드 앱입니다. 3장 카드 스프레드(과거/현재/미래), 주제별 카드 해석과 심화 성찰 프롬프트를 제공합니다.
 
 **주요 특징:**
 - 22장 메이저 아르카나 카드
 - 3장 카드 스프레드 (과거/현재/미래)
 - 정방향/역방향 해석
 - 러브/금전/건강/개인성장 카테고리
-- AI 심층 타로 리딩 (광고 시청 후)
+- 규칙 기반 심화 성찰 프롬프트
 - 타로 카드 갤러리
 - 결과 공유 기능 (Web Share API)
 - Canvas 결과 이미지 생성
-- 일일 1회 무료 점사, 추가는 광고 시청
+- 일일 1회 카드 리딩과 주제별 카드 탐색
 
 ## 기술 스택
 
@@ -63,11 +63,11 @@ daily-tarot/
 - 정방향/역방향 자동 판별
 - 종합 메시지 생성
 
-### 2. AI 심층 리딩
+### 2. 심화 성찰
 - 패턴 분석
 - 개인화된 조언
 - 실천 과제 (3개)
-- 광고 시청 후 제공
+- 결과 화면에서 즉시 제공
 
 ### 3. 카테고리별 운세
 - 💕 러브 (연애)
@@ -110,21 +110,16 @@ daily-tarot/
 - **표면**: #1a1a2e, #252540
 - **테마색**: 타로 카드의 신비로운 느낌
 
-## 광고 & 수익화
+## 광고
 
 ### AdSense
-- 상단 배너 광고
-- 하단 배너 광고
+- 사이트 공통 Auto Ads
 - 반응형 레이아웃
 
-### AdMob (앱 버전)
-- 전면 광고 (AI 심층 리딩 전)
-- 보상형 광고 (추가 운세)
-
-### 프리미엘 콘텐츠
-- **무료**: 기본 3장 카드 스프레드 + 해석
-- **프리미엄** (광고 시청 후):
-  - AI 심층 타로 리딩
+### 제공 기능
+- 기본 3장 카드 스프레드 + 해석
+- 심화 성찰:
+  - 규칙 기반 카드 연결 해석
   - 패턴 분석
   - 개인화된 조언
   - 실천 과제
@@ -174,7 +169,7 @@ http://localhost:8000
 # Git 초기화 (이미 완료)
 git init
 git add .
-git commit -m "Daily Tarot: 22 Major Arcana cards with 3-card spread, AI analysis, 12-language support"
+git commit -m "Daily Tarot: 22 Major Arcana cards with 3-card spread and 12-language support"
 
 # 원격 저장소 연결 (필요시)
 git remote add origin https://github.com/dopabrain/daily-tarot.git
@@ -212,10 +207,9 @@ Copyright © 2026 DopaBrain. All rights reserved.
 ## 개발자
 
 Sang-woo Park (상우)
-- AI-based App Development
-- AdMob SDK Integration
+- 정적 웹앱 개발
 - Google Play 준비
 
 ---
 
-**바이럴 전략**: 타로 결과 공유 → SNS 자연 확산 → 트래픽 유입 → 광고 수익
+**공유 경로**: 타로 결과 공유 → SNS 자연 확산 → 재방문
