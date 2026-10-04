@@ -113,5 +113,18 @@
     "guide2": "Cartas al derecho: energia activa; al reves: reflexion",
     "guide3": "La posicion de la carta agrega contexto al significado",
     "guide4": "Se recomienda una lectura diaria para mejores resultados"
+  },
+  "faq": {
+    "faqTitle": "Preguntas Frecuentes (FAQ)",
+    "q1Title": "¿Qué es una tirada diaria de tarot?",
+    "q1Desc": "La lectura diaria de tarot es una práctica de reflexión e introspección diaria. Esta versión gratuita utiliza una tirada de 3 cartas (pasado, presente, futuro) de los 22 Arcanos Mayores para ofrecer claridad sobre tu día, relaciones y crecimiento personal.",
+    "q2Title": "¿Cómo se interpretan las cartas del tarot?",
+    "q2Desc": "Cada carta tiene significados al derecho e invertida. La posición en la tirada también influye: la primera carta representa influencias pasadas, la segunda tu situación presente y la tercera la dirección futura. Confía en tu intuición al leer los mensajes.",
+    "q3Title": "¿Es preciso el tarot?",
+    "q3Desc": "El tarot es una herramienta de autorreflexión y autoconocimiento, no un método para predecir un destino fijo. Las cartas actúan como espejos de tus pensamientos subconscientes, ayudándote a ver tus circunstancias con una perspectiva renovada.",
+    "q4Title": "¿Con qué frecuencia se debe hacer una lectura?",
+    "q4Desc": "La mayoría de practicantes recomiendan una sola tirada al día para mantener el enfoque y evitar saturación mental. Una tirada diaria te permite contemplar el mensaje a lo largo de toda la jornada.",
+    "q5Title": "¿Cuál es la diferencia entre Arcanos Mayores y Menores?",
+    "q5Desc": "Los Arcanos Mayores constan de 22 cartas que representan grandes lecciones espirituales y temas vitales (El Loco, Los Enamorados, El Mundo). Los Arcanos Menores abarcan 56 cartas sobre eventos cotidianos. Esta app se enfoca en los 22 Arcanos Mayores para lecturas más profundas."
   }
 }

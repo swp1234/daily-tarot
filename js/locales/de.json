@@ -113,5 +113,18 @@
     "guide2": "Aufrechte Karten: aktive Energie; umgekehrte: Reflexion",
     "guide3": "Die Kartenposition fuegt Kontext zur Bedeutung hinzu",
     "guide4": "Eine taegliche Lesung wird fuer beste Ergebnisse empfohlen"
+  },
+  "faq": {
+    "faqTitle": "Häufig gestellte Fragen (FAQ)",
+    "q1Title": "Was ist ein tägliches Tarot-Reading?",
+    "q1Desc": "Das tägliche Tarot-Reading ist eine Praxis, bei der täglich Karten gezogen werden, um Orientierung und Selbstreflexion zu fördern. Dieses kostenlose Online-Tool nutzt eine 3-Karten-Legung (Vergangenheit, Gegenwart, Zukunft) aus den 22 Großen Arkana.",
+    "q2Title": "Wie interpretiert man Tarotkarten?",
+    "q2Desc": "Jede Karte hat aufrechte und umgekehrte Bedeutungen. Auch die Position ist entscheidend: Die erste Karte steht für vergangene Einflüsse, die zweite für die Gegenwart und die dritte für die zukünftige Richtung.",
+    "q3Title": "Ist Tarot treffsicher?",
+    "q3Desc": "Tarot ist vor allem ein Instrument zur Selbstreflexion und Introspektion, kein starres Wahrsagen. Die Karten spiegeln unbewusste Gedanken und Gefühle wider und eröffnen neue Perspektiven auf persönliche Lebenssituationen.",
+    "q4Title": "Wie oft sollte man die Karten befragen?",
+    "q4Desc": "Erfahrene Praktizierende empfehlen eine einzige Legung pro Tag, um den Fokus zu bewahren und Informationsüberflutung zu vermeiden. So kann die Botschaft den ganzen Tag über wirken.",
+    "q5Title": "Was ist der Unterschied zwischen Großen und Kleinen Arkana?",
+    "q5Desc": "Die Großen Arkana bestehen aus 22 Karten, die fundamentale Lebensthemen und seelische Wandlungen symbolisieren (Der Narr, Die Liebenden, Die Welt). Die Kleinen Arkana umfassen 56 Karten des Alltags. Diese App fokussiert sich auf die 22 Großen Arkana."
   }
 }

@@ -113,5 +113,18 @@
     "guide2": "Düz kartlar aktif enerji; ters kartlar düşünme önerir",
     "guide3": "Kart pozisyonu anlama bağlam ekler",
     "guide4": "En iyi sonuçlar için günde bir okuma önerilir"
+  },
+  "faq": {
+    "faqTitle": "Sıkça Sorulan Sorular (SSS)",
+    "q1Title": "Günlük tarot açılımı nedir?",
+    "q1Desc": "Günlük tarot açılımı, rehberlik ve kişisel içgörü için her gün kart çekme pratiğidir. Bu ücretsiz çevrimiçi araç, 22 Büyük Arkana kartından oluşan 3 kartlık açılım (geçmiş, şimdi, gelecek) sunar.",
+    "q2Title": "Tarot kartları nasıl yorumlanır?",
+    "q2Desc": "Her kartın düz ve ters anlamları vardır. Kartın açılımdaki konumu da belirleyicidir: geçmiş etkiler, şimdiki durum ve geleceğe dönük yönelim. Sezgilerinize güvenin.",
+    "q3Title": "Tarot ne kadar doğrudur?",
+    "q3Desc": "Tarot geleceği kesin olarak bildiren bir kehanet değil, öz-yansıtma ve farkındalık aracıdır. Kartlar, bilinçaltı düşüncelerinizi yansıtan aynalar gibi çalışır.",
+    "q4Title": "Ne sıklıkla tarot açılımı yapmalıyım?",
+    "q4Desc": "Odaklanmayı korumak ve bilgi karmaşasını önlemek için günde bir kez açılım yapılması önerilir. Böylece gün boyunca kartın mesajı üzerine düşünebilirsiniz.",
+    "q5Title": "Büyük ve Küçük Arkana arasındaki fark nedir?",
+    "q5Desc": "Büyük Arkana, önemli yaşam derslerini ve evrensel temaları simgeleyen 22 karttan oluşur (Deli, Aşıklar, Dünya vb.). Küçük Arkana ise 56 günlük olayı kapsar. Bu uygulama derinlik için 22 Büyük Arkana'ya odaklanır."
   }
 }

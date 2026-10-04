@@ -113,5 +113,18 @@
     "guide2": "Cartes droites : énergie active ; inversées : réflexion",
     "guide3": "La position de la carte ajoute du contexte à la signification",
     "guide4": "Un tirage quotidien est recommandé pour de meilleurs résultats"
+  },
+  "faq": {
+    "faqTitle": "Foire Aux Questions (FAQ)",
+    "q1Title": "Qu'est-ce qu'un tirage de tarot quotidien ?",
+    "q1Desc": "Le tirage de tarot quotidien est une pratique de guidance et d'introspection régulière. Cette version gratuite utilise un tirage à 3 cartes (passé, présent, avenir) parmi les 22 Arcanes Majeurs pour éclairer votre journée et votre évolution personnelle.",
+    "q2Title": "Comment interpréter les cartes de tarot ?",
+    "q2Desc": "Chaque carte possède des significations à l'endroit et inversée. La position compte aussi : la première carte reflète le passé, la deuxième la situation présente, et la troisième l'orientation future. Fiez-vous à votre intuition.",
+    "q3Title": "Le tarot est-il fiable ?",
+    "q3Desc": "Le tarot est un miroir de réflexion intérieure et non un outil divinatoire rigide. Il permet de faire émerger des ressentis subconscients pour aborder vos défis avec un regard neuf.",
+    "q4Title": "À quelle fréquence faut-il faire un tirage ?",
+    "q4Desc": "Il est conseillé de réaliser un tirage par jour afin de conserver un cap clair et d'éviter la dispersion mentale. Une lecture quotidienne permet d'intégrer pleinement le message reçu.",
+    "q5Title": "Quelle est la différence entre Arcanes Majeurs et Mineurs ?",
+    "q5Desc": "Les 22 Arcanes Majeurs symbolisent les grands cycles et enseignements de vie (Le Mat, Les Amoureux, Le Monde). Les Arcanes Mineurs (56 cartes) concernent les événements du quotidien. Cette application se concentre sur les Arcanes Majeurs pour un travail plus profond."
   }
 }

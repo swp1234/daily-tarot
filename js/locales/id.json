@@ -113,5 +113,18 @@
     "guide2": "Kartu tegak: energi aktif; terbalik: refleksi",
     "guide3": "Posisi kartu menambah konteks pada makna",
     "guide4": "Satu pembacaan harian direkomendasikan untuk hasil terbaik"
+  },
+  "faq": {
+    "faqTitle": "Pertanyaan yang Sering Diajukan (FAQ)",
+    "q1Title": "Apa itu pembacaan tarot harian?",
+    "q1Desc": "Pembacaan tarot harian adalah praktik refleksi diri dan bimbingan batin setiap hari. Alat gratis ini menggunakan tebaran 3 kartu (masa lalu, masa kini, masa depan) dari 22 Major Arcana.",
+    "q2Title": "Bagaimana cara menafsirkan kartu tarot?",
+    "q2Desc": "Setiap kartu memiliki makna tegak dan terbalik. Posisi kartu juga penting: masa lalu, situasi sekarang, dan arah masa depan. Percayalah pada intuisi Anda saat membaca pesan kartu.",
+    "q3Title": "Apakah ramalan tarot itu akurat?",
+    "q3Desc": "Tarot adalah alat introspeksi dan kesadaran diri, bukan ramalan masa depan yang kaku. Kartu bertindak sebagai cermin bagi pikiran bawah sadar Anda.",
+    "q4Title": "Seberapa sering saya harus membaca tarot?",
+    "q4Desc": "Disarankan satu kali pembacaan per hari agar tetap fokus dan tidak kelebihan informasi. Satu tebaran harian membantu Anda merenungkan maknanya sepanjang hari.",
+    "q5Title": "Apa perbedaan antara Major dan Minor Arcana?",
+    "q5Desc": "Major Arcana terdiri dari 22 kartu yang melambangkan tema besar kehidupan dan pelajaran spiritual (The Fool, The Lovers, The World). Minor Arcana berisi 56 kartu peristiwa harian. Aplikasi ini berfokus pada 22 Major Arcana."
   }
 }
