@@ -1824,3 +1824,95 @@ a:focus-visible {
         transition-duration: 0.01ms !important;
     }
 }
+
+.share-btn {
+    min-height: 44px;
+    padding: 10px 16px;
+}
+
+.curated-resources-card {
+    margin-top: 1.5rem;
+    padding: 1.15rem;
+    border-radius: var(--radius-md, 14px);
+    background: rgba(155, 89, 182, 0.1);
+    border: 1px solid rgba(232, 197, 71, 0.25);
+    text-align: left;
+}
+.curated-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent-gold, #e8c547);
+    margin: 0 0 0.35rem;
+}
+.curated-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-secondary, #b0b0b0);
+    margin: 0 0 0.85rem;
+    line-height: 1.45;
+}
+.curated-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+.curated-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 14px;
+    min-height: 44px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(155, 89, 182, 0.25);
+    text-decoration: none;
+    color: var(--text-primary, #f0f0f5);
+    box-sizing: border-box;
+    transition: border-color 0.2s, transform 0.2s, background 0.2s;
+}
+.curated-item:hover {
+    border-color: var(--accent-gold, #e8c547);
+    background: rgba(155, 89, 182, 0.18);
+    transform: translateY(-2px);
+}
+.curated-item-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+}
+.curated-item-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+.curated-item-desc {
+    font-size: 0.78rem;
+    color: var(--text-secondary, #b0b0b0);
+    line-height: 1.4;
+}
+.curated-item-cta {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent-gold, #e8c547);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.curated-disclosure {
+    margin: 0.75rem 0 0;
+    font-size: 0.72rem;
+    color: var(--text-secondary, #9ca3af);
+    line-height: 1.4;
+}
+[data-theme="light"] .curated-resources-card {
+    background: #faf7fd;
+    border-color: rgba(155, 89, 182, 0.28);
+}
+[data-theme="light"] .curated-item {
+    background: #ffffff;
+    color: #1a1a2e;
+}
+[data-theme="light"] .curated-title,
+[data-theme="light"] .curated-item-cta {
+    color: #7c3aed;
+}

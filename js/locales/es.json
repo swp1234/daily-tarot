@@ -85,7 +85,8 @@
   },
   "share": {
     "copied": "✅ ¡Copiado!",
-    "copyUrl": "📋 Copiar URL"
+    "copyUrl": "📋 Copiar URL",
+    "downloadCard": "Guardar Tarjeta"
   },
   "error": {
     "storage": "Algunas funciones pueden estar limitadas en modo privado.",
@@ -127,5 +128,15 @@
     "q4Desc": "La mayoría de practicantes recomiendan una sola tirada al día para mantener el enfoque y evitar saturación mental. Una tirada diaria te permite contemplar el mensaje a lo largo de toda la jornada.",
     "q5Title": "¿Cuál es la diferencia entre Arcanos Mayores y Menores?",
     "q5Desc": "Los Arcanos Mayores constan de 22 cartas que representan grandes lecciones espirituales y temas vitales (El Loco, Los Enamorados, El Mundo). Los Arcanos Menores abarcan 56 cartas sobre eventos cotidianos. Esta app se enfoca en los 22 Arcanos Mayores para lecturas más profundas."
+  },
+  "curated": {
+    "title": "Libros Recomendados sobre Simbolismo del Tarot",
+    "subtitle": "Guías clásicas para profundizar en los arquetipos, la intuición y tu diario reflexivo.",
+    "book1Title": "Setenta y Ocho Grados de Sabiduría — Rachel Pollack",
+    "book1Desc": "Obra de referencia sobre el simbolismo de los Arcanos Mayores y su lectura psicológica",
+    "book2Title": "Tarot for Your Self — Mary K. Greer",
+    "book2Desc": "Cuaderno práctico con tiradas diarias y ejercicios de escritura introspectiva",
+    "cta": "Ver Libro",
+    "disclosure": "Divulgación de afiliados: Como Afiliado de Amazon, DopaBrain puede ganar ingresos por compras elegibles."
   }
 }

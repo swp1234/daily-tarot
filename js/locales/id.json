@@ -85,7 +85,8 @@
   },
   "share": {
     "copied": "✅ Disalin!",
-    "copyUrl": "📋 Salin URL"
+    "copyUrl": "📋 Salin URL",
+    "downloadCard": "Simpan Kartu Hasil"
   },
   "error": {
     "storage": "Beberapa fitur mungkin terbatas dalam mode privat.",
@@ -127,5 +128,15 @@
     "q4Desc": "Disarankan satu kali pembacaan per hari agar tetap fokus dan tidak kelebihan informasi. Satu tebaran harian membantu Anda merenungkan maknanya sepanjang hari.",
     "q5Title": "Apa perbedaan antara Major dan Minor Arcana?",
     "q5Desc": "Major Arcana terdiri dari 22 kartu yang melambangkan tema besar kehidupan dan pelajaran spiritual (The Fool, The Lovers, The World). Minor Arcana berisi 56 kartu peristiwa harian. Aplikasi ini berfokus pada 22 Major Arcana."
+  },
+  "curated": {
+    "title": "Buku Pilihan untuk Memahami Simbol Tarot",
+    "subtitle": "Panduan klasik untuk mendalami simbol arkana, intuisi, dan refleksi harian.",
+    "book1Title": "Seventy-Eight Degrees of Wisdom — Rachel Pollack",
+    "book1Desc": "Buku rujukan klasik tentang makna simbolik Arkana Mayor dan wawasan psikologis",
+    "book2Title": "Tarot for Your Self — Mary K. Greer",
+    "book2Desc": "Buku latihan terstruktur berisi tebaran kartu dan panduan jurnal harian",
+    "cta": "Lihat Buku",
+    "disclosure": "Pengungkapan afiliasi: Sebagai Amazon Associate, DopaBrain dapat memperoleh komisi dari pembelian yang memenuhi syarat."
   }
 }

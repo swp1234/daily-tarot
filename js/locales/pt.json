@@ -85,7 +85,8 @@
   },
   "share": {
     "copied": "✅ Copiado!",
-    "copyUrl": "📋 Copiar URL"
+    "copyUrl": "📋 Copiar URL",
+    "downloadCard": "Salvar Cartão"
   },
   "error": {
     "storage": "Algumas funções podem ser limitadas no modo privado.",
@@ -127,5 +128,15 @@
     "q4Desc": "Recomenda-se uma leitura por dia para manter o foco e evitar sobrecarga de informações. Uma tiragem diária permite refletir sobre a mensagem durante todo o dia.",
     "q5Title": "Qual a diferença entre Arcanos Maiores e Menores?",
     "q5Desc": "Os Arcanos Maiores são 22 cartas que representam grandes lições de vida e arquétipos profundos (O Louco, Os Enamorados, O Mundo). Os Menores são 56 cartas do cotidiano. Este app foca nos 22 Arcanos Maiores."
+  },
+  "curated": {
+    "title": "Livros Recomendados para Reflexão no Tarot",
+    "subtitle": "Guias clássicos para aprofundar simbolismo arquetípico, intuição e escrita reflexiva.",
+    "book1Title": "78 Graus de Sabedoria — Rachel Pollack",
+    "book1Desc": "Referência essencial sobre o simbolismo dos Arcanos Maiores e leitura introspectiva",
+    "book2Title": "Tarot for Your Self — Mary K. Greer",
+    "book2Desc": "Guia prático com tiragens diárias e exercícios de autoconhecimento",
+    "cta": "Ver Livro",
+    "disclosure": "Divulgação de afiliados: Como Associado da Amazon, o DopaBrain pode ganhar com compras qualificadas."
   }
 }

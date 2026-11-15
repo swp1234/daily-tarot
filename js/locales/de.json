@@ -85,7 +85,8 @@
   },
   "share": {
     "copied": "✅ Kopiert!",
-    "copyUrl": "📋 URL kopieren"
+    "copyUrl": "📋 URL kopieren",
+    "downloadCard": "Ergebniskarte Speichern"
   },
   "error": {
     "storage": "Einige Funktionen sind im privaten Modus eingeschränkt.",
@@ -127,5 +128,15 @@
     "q4Desc": "Erfahrene Praktizierende empfehlen eine einzige Legung pro Tag, um den Fokus zu bewahren und Informationsüberflutung zu vermeiden. So kann die Botschaft den ganzen Tag über wirken.",
     "q5Title": "Was ist der Unterschied zwischen Großen und Kleinen Arkana?",
     "q5Desc": "Die Großen Arkana bestehen aus 22 Karten, die fundamentale Lebensthemen und seelische Wandlungen symbolisieren (Der Narr, Die Liebenden, Die Welt). Die Kleinen Arkana umfassen 56 Karten des Alltags. Diese App fokussiert sich auf die 22 Großen Arkana."
+  },
+  "curated": {
+    "title": "Buchempfehlungen zur Tarot-Symbolik",
+    "subtitle": "Bewährte Klassiker für Archetypen-Symbolik, Intuition und tägliche Selbstreflexion.",
+    "book1Title": "Seventy-Eight Degrees of Wisdom — Rachel Pollack",
+    "book1Desc": "Standardwerk zur Symbolik der Großen Arkana und psychologischen Deutung",
+    "book2Title": "Tarot for Your Self — Mary K. Greer",
+    "book2Desc": "Praxisnahes Arbeitsbuch mit Legesystemen und Reflexionsübungen",
+    "cta": "Buch ansehen",
+    "disclosure": "Affiliate-Hinweis: Als Amazon-Partner verdient DopaBrain an qualifizierten Verkäufen."
   }
 }

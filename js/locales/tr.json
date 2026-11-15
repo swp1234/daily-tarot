@@ -85,7 +85,8 @@
   },
   "share": {
     "copied": "✅ Kopyalandı!",
-    "copyUrl": "📋 URL Kopyala"
+    "copyUrl": "📋 URL Kopyala",
+    "downloadCard": "Sonuç Kartını Kaydet"
   },
   "error": {
     "storage": "Gizli modda bazı özellikler sınırlı olabilir.",
@@ -127,5 +128,15 @@
     "q4Desc": "Odaklanmayı korumak ve bilgi karmaşasını önlemek için günde bir kez açılım yapılması önerilir. Böylece gün boyunca kartın mesajı üzerine düşünebilirsiniz.",
     "q5Title": "Büyük ve Küçük Arkana arasındaki fark nedir?",
     "q5Desc": "Büyük Arkana, önemli yaşam derslerini ve evrensel temaları simgeleyen 22 karttan oluşur (Deli, Aşıklar, Dünya vb.). Küçük Arkana ise 56 günlük olayı kapsar. Bu uygulama derinlik için 22 Büyük Arkana'ya odaklanır."
+  },
+  "curated": {
+    "title": "Tarot Sembolizmi İçin Önerilen Kitaplar",
+    "subtitle": "Arketip sembollerini, sezgiyi ve günlük farkındalığı derinleştiren klasik kaynaklar.",
+    "book1Title": "Seventy-Eight Degrees of Wisdom — Rachel Pollack",
+    "book1Desc": "Büyük Arkana sembolizmi ve psikolojik içgörü için temel başvuru kaynağı",
+    "book2Title": "Tarot for Your Self — Mary K. Greer",
+    "book2Desc": "Açılımlar ve günlük değerlendirme alıştırmaları içeren pratik çalışma kitabı",
+    "cta": "Kitabı İncele",
+    "disclosure": "Ortaklık bildirimi: Amazon İş Ortağı olarak uygun satın alımlardan gelir elde edebiliriz."
   }
 }

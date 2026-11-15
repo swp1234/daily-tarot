@@ -96,6 +96,8 @@ class DailyTarotApp {
 
         // Setup event listeners
         this.setupEventListeners();
+        this.openAboutDetails();
+        this.updateMonetizedLinks();
 
         // Hide loader
         const loader = document.getElementById('app-loader');
@@ -159,6 +161,7 @@ class DailyTarotApp {
 
         // Reading tab
         document.getElementById('start-reading-btn').addEventListener('click', () => this.startReading({ trigger: 'manual' }));
+        document.getElementById('download-tarot-card')?.addEventListener('click', () => this.downloadStoryCard());
         document.getElementById('share-reading').addEventListener('click', () => this.shareReading());
         document.getElementById('deep-reading-btn').addEventListener('click', () => this.showDeepReading());
         document.getElementById('new-reading-btn').addEventListener('click', () => this.resetReading());
@@ -176,18 +179,20 @@ class DailyTarotApp {
 
         // Social share buttons
         document.getElementById('shareTwitterBtn')?.addEventListener('click', () => {
-            const text = document.title + ' - ' + window.location.href;
-            window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text), '_blank');
-            if (typeof gtag !== 'undefined') gtag('event', 'share', { method: 'twitter' });
+            const shareUrl = this.getShareUrl();
+            const text = `${document.title} - ${shareUrl}`;
+            window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text), '_blank', 'noopener');
+            if (typeof gtag !== 'undefined') gtag('event', 'share', { method: 'twitter', content_type: 'tarot_reading' });
         });
 
         document.getElementById('shareUrlBtn')?.addEventListener('click', () => {
-            navigator.clipboard.writeText(window.location.href).then(() => {
+            const shareUrl = this.getShareUrl();
+            navigator.clipboard?.writeText(shareUrl).then(() => {
                 const btn = document.getElementById('shareUrlBtn');
                 btn.textContent = i18n.t('share.copied') || '✅ Copied!';
                 setTimeout(() => { btn.innerHTML = i18n.t('share.copyUrl') || '📋 Copy URL'; }, 2000);
             });
-            if (typeof gtag !== 'undefined') gtag('event', 'share', { method: 'url_copy' });
+            if (typeof gtag !== 'undefined') gtag('event', 'share', { method: 'url_copy', content_type: 'tarot_reading' });
         });
     }
 
@@ -229,6 +234,7 @@ class DailyTarotApp {
         document.querySelectorAll('.lang-option').forEach(opt => {
             opt.classList.toggle('active', opt.dataset.lang === lang);
         });
+        this.updateMonetizedLinks();
     }
 
     startReading(options = {}) {
@@ -253,6 +259,7 @@ class DailyTarotApp {
             event_label: this.activeEntryMode,
             auto_draw: this.activeAutoDraw ? 'true' : 'false'
         });
+        this.track('test_start', { app_name: 'daily-tarot', content_type: 'tarot_3card_spread' });
 
         // Hide intro, show card drawing area
         document.querySelector('.reading-intro').classList.add('hidden');
@@ -376,6 +383,7 @@ class DailyTarotApp {
             auto_draw: this.activeAutoDraw ? 'true' : 'false',
             card_count: drawnCards.length
         });
+        this.track('test_complete', { app_name: 'daily-tarot', result_type: '3card_spread' });
     }
 
     showShareButtons() {
@@ -455,7 +463,7 @@ class DailyTarotApp {
 
         const title = i18n.t('reading.yourReading', 'My Tarot Reading');
         const text = this.shareData.summary.replace(/\n/g, ' ');
-        const url = window.location.href;
+        const url = this.getShareUrl();
 
         if (navigator.share) {
             navigator.share({ title, text, url }).catch(err =>
@@ -541,7 +549,7 @@ class DailyTarotApp {
 
     shareCategory() {
         if (!this.shareData) return;
-        const text = `${this.shareData.interpretation}\n\n${window.location.href}`;
+        const text = `${this.shareData.interpretation}\n\n${this.getShareUrl()}`;
 
         if (navigator.share) {
             navigator.share({ title: 'Tarot Reading', text }).catch(err =>
@@ -583,6 +591,133 @@ class DailyTarotApp {
 
     closeCardDetail() {
         document.getElementById('card-detail').classList.add('hidden');
+    }
+
+    getShareUrl() {
+        const lang = this.currentLanguage() || 'en';
+        return `https://dopabrain.com/daily-tarot/?lang=${encodeURIComponent(lang)}&utm_source=share`;
+    }
+
+    openAboutDetails() {
+        document.querySelectorAll('#about-tarot details').forEach((detailsEl) => {
+            detailsEl.open = true;
+        });
+    }
+
+    updateMonetizedLinks() {
+        const lang = this.currentLanguage() || 'en';
+        const stores = { de: 'www.amazon.de', fr: 'www.amazon.fr', es: 'www.amazon.es', ja: 'www.amazon.co.jp', ko: 'www.amazon.com' };
+        const host = stores[lang] || 'www.amazon.com';
+        const curatedMap = {
+            seventyEightDegrees: `https://${host}/dp/1578636655?tag=dopabrain-20`,
+            tarotForYourSelf: `https://${host}/dp/1578636795?tag=dopabrain-20`
+        };
+        document.querySelectorAll('#curated-resources-card .curated-item').forEach((link) => {
+            const key = link.getAttribute('data-curated-key');
+            if (curatedMap[key]) link.setAttribute('href', curatedMap[key]);
+            if (!link.dataset.trackedCurated) {
+                link.dataset.trackedCurated = 'true';
+                link.addEventListener('click', () => {
+                    const currentLang = this.currentLanguage() || lang;
+                    const dest = link.getAttribute('href');
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'curated_resource_click', {
+                            app_name: 'daily-tarot',
+                            resource_key: key,
+                            content_locale: currentLang,
+                            cta_surface: 'curated_resources'
+                        });
+                        gtag('event', 'content_cta_click', {
+                            cta_type: 'curated_book',
+                            destination: dest,
+                            source: 'daily_tarot'
+                        });
+                    }
+                });
+            }
+        });
+        document.querySelectorAll('.related-tests a.related-tests__card').forEach((link) => {
+            const rawHref = link.getAttribute('href') || '';
+            const basePath = rawHref.split('?')[0];
+            if (basePath.startsWith('/')) {
+                link.setAttribute('href', `${basePath}?lang=${encodeURIComponent(lang)}&source=daily_tarot_result`);
+            }
+            if (!link.dataset.trackedRelated) {
+                link.dataset.trackedRelated = 'true';
+                link.addEventListener('click', () => {
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'content_cta_click', {
+                            cta_surface: 'daily_tarot_related',
+                            destination: link.getAttribute('href'),
+                            source: 'daily_tarot_result',
+                            lang: this.currentLanguage() || lang
+                        });
+                    }
+                });
+            }
+        });
+    }
+
+    downloadStoryCard() {
+        const cards = (this.currentCards || []).filter(Boolean);
+        if (cards.length === 0) return;
+        const canvas = document.createElement('canvas');
+        canvas.width = 1080;
+        canvas.height = 1920;
+        const ctx = canvas.getContext('2d');
+        const grad = ctx.createLinearGradient(0, 0, 1080, 1920);
+        grad.addColorStop(0, '#140b24');
+        grad.addColorStop(0.55, '#2b1447');
+        grad.addColorStop(1, '#0f0a1c');
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, 1080, 1920);
+        ctx.fillStyle = 'rgba(232, 197, 71, 0.14)';
+        ctx.beginPath();
+        ctx.arc(540, 560, 340, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.fillStyle = '#e8c547';
+        ctx.font = 'bold 34px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('DOPABRAIN · DAILY TAROT SPREAD', 540, 210);
+        cards.forEach((item, idx) => {
+            const cx = 240 + (idx * 300);
+            ctx.font = '120px sans-serif';
+            ctx.fillText(item.card.emoji || '🔮', cx, 560);
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 30px sans-serif';
+            ctx.fillText(this.localized(item.card.name, 'Tarot'), cx, 660);
+        });
+        ctx.fillStyle = '#e2d9f3';
+        ctx.font = '32px sans-serif';
+        const summary = (this.shareData?.summary || '').replace(/\s+/g, ' ').trim();
+        const words = summary.split(' ');
+        let line = '', y = 840;
+        for (const word of words) {
+            const test = line ? `${line} ${word}` : word;
+            if (ctx.measureText(test).width > 860 && line) {
+                ctx.fillText(line, 540, y);
+                line = word;
+                y += 48;
+                if (y > 1520) break;
+            } else {
+                line = test;
+            }
+        }
+        if (line && y <= 1560) ctx.fillText(line, 540, y);
+        ctx.fillStyle = '#a78bfa';
+        ctx.font = 'bold 30px sans-serif';
+        ctx.fillText('dopabrain.com/daily-tarot/', 540, 1760);
+        try {
+            const link = document.createElement('a');
+            link.download = 'daily-tarot-reading.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        } catch (e) {}
+        this.track('save_image', {
+            app_name: 'daily-tarot',
+            result_type: '3card_spread',
+            save_surface: 'result_story_1080x1920'
+        });
     }
 
 }

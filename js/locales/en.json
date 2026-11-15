@@ -85,7 +85,8 @@
   },
   "share": {
     "copied": "✅ Copied!",
-    "copyUrl": "📋 Copy URL"
+    "copyUrl": "📋 Copy URL",
+    "downloadCard": "Save Story Card"
   },
   "error": {
     "storage": "Some features may be limited in private mode. You can continue.",
@@ -127,5 +128,15 @@
     "q4Desc": "Most tarot practitioners recommend one daily reading to maintain focus and avoid information overload. A single daily draw allows you to reflect on the message throughout the day. This app offers one free daily reading to encourage mindful practice.",
     "q5Title": "What is the difference between Major and Minor Arcana?",
     "q5Desc": "The Major Arcana consists of 22 cards representing significant life themes and spiritual lessons (like The Fool, The Lovers, The World). The Minor Arcana has 56 cards dealing with day-to-day events. This app focuses on the 22 Major Arcana cards for deeper, more meaningful daily readings."
+  },
+  "curated": {
+    "title": "Curated Books for Deeper Tarot Reflection",
+    "subtitle": "Classic guides on archetype symbolism, intuition, and daily journaling practice.",
+    "book1Title": "Seventy-Eight Degrees of Wisdom — Rachel Pollack",
+    "book1Desc": "Foundational guide to Major Arcana symbolism and psychological insight",
+    "book2Title": "Tarot for Your Self — Mary K. Greer",
+    "book2Desc": "Structured workbook with spreads, daily rituals, and journaling exercises",
+    "cta": "View Book",
+    "disclosure": "Affiliate disclosure: As an Amazon Associate, DopaBrain may earn from qualifying purchases."
   }
 }

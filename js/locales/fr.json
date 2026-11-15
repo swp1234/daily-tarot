@@ -85,7 +85,8 @@
   },
   "share": {
     "copied": "✅ Copié!",
-    "copyUrl": "📋 Copier URL"
+    "copyUrl": "📋 Copier URL",
+    "downloadCard": "Enregistrer la Carte"
   },
   "error": {
     "storage": "Certaines fonctions peuvent être limitées en mode privé.",
@@ -127,5 +128,15 @@
     "q4Desc": "Il est conseillé de réaliser un tirage par jour afin de conserver un cap clair et d'éviter la dispersion mentale. Une lecture quotidienne permet d'intégrer pleinement le message reçu.",
     "q5Title": "Quelle est la différence entre Arcanes Majeurs et Mineurs ?",
     "q5Desc": "Les 22 Arcanes Majeurs symbolisent les grands cycles et enseignements de vie (Le Mat, Les Amoureux, Le Monde). Les Arcanes Mineurs (56 cartes) concernent les événements du quotidien. Cette application se concentre sur les Arcanes Majeurs pour un travail plus profond."
+  },
+  "curated": {
+    "title": "Lectures Recommandées sur le Tarot",
+    "subtitle": "Guides de référence pour explorer le symbolisme des arcanes et l’introspection.",
+    "book1Title": "Soixante-dix-huit degrés de sagesse — Rachel Pollack",
+    "book1Desc": "Ouvrage fondamental sur la symbolique des arcanes majeurs et la lecture intérieure",
+    "book2Title": "Tarot for Your Self — Mary K. Greer",
+    "book2Desc": "Cahier pratique avec tirages quotidiens et exercices d’écriture réflexive",
+    "cta": "Voir le livre",
+    "disclosure": "Lien affilié : En tant que Partenaire Amazon, DopaBrain réalise un bénéfice sur les achats éligibles."
   }
 }

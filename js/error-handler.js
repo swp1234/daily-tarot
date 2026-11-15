@@ -127,6 +127,8 @@ class ErrorHandler {
             color: white;
             cursor: pointer;
             font-size: 16px;
+            min-width: 44px;
+            min-height: 44px;
             padding: 0;
             margin-left: auto;
         `;
