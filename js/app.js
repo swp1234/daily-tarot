@@ -187,11 +187,31 @@ class DailyTarotApp {
 
         document.getElementById('shareUrlBtn')?.addEventListener('click', () => {
             const shareUrl = this.getShareUrl();
-            navigator.clipboard?.writeText(shareUrl).then(() => {
+            const markCopied = () => {
                 const btn = document.getElementById('shareUrlBtn');
+                if (!btn) return;
                 btn.textContent = i18n.t('share.copied') || '✅ Copied!';
-                setTimeout(() => { btn.innerHTML = i18n.t('share.copyUrl') || '📋 Copy URL'; }, 2000);
-            });
+                setTimeout(() => { btn.textContent = i18n.t('share.copyUrl') || '📋 Copy URL'; }, 2000);
+            };
+            const execCopy = () => {
+                try {
+                    const ta = document.createElement('textarea');
+                    ta.value = shareUrl;
+                    ta.setAttribute('readonly', '');
+                    ta.style.position = 'fixed';
+                    ta.style.opacity = '0';
+                    document.body.appendChild(ta);
+                    ta.select();
+                    const ok = document.execCommand('copy');
+                    document.body.removeChild(ta);
+                    if (ok) markCopied();
+                } catch (e) {}
+            };
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(shareUrl).then(markCopied).catch(execCopy);
+            } else {
+                execCopy();
+            }
             if (typeof gtag !== 'undefined') gtag('event', 'share', { method: 'url_copy', content_type: 'tarot_reading' });
         });
     }
@@ -247,7 +267,7 @@ class DailyTarotApp {
                 });
                 return false;
             }
-            alert(i18n.t('reading.limitReached', 'Your daily reading is already saved. Explore a category or the card gallery for another perspective.'));
+            this.showToast(i18n.t('reading.limitReached', 'Your daily reading is already saved. Explore a category or the card gallery for another perspective.'));
             return false;
         }
 
@@ -472,10 +492,7 @@ class DailyTarotApp {
         } else {
             // Fallback
             const shareText = `${title}\n${text}\n${url}`;
-            if (navigator.clipboard) {
-                navigator.clipboard.writeText(shareText);
-                alert(i18n.t('reading.copiedToClipboard', 'Copied to clipboard!'));
-            }
+            this.copyWithToast(shareText, i18n.t('reading.copiedToClipboard', 'Copied to clipboard!'));
         }
     }
 
@@ -556,8 +573,7 @@ class DailyTarotApp {
                 console.log('Share failed:', err)
             );
         } else {
-            navigator.clipboard?.writeText(text);
-            alert(i18n.t('reading.copiedToClipboard', 'Copied to clipboard!'));
+            this.copyWithToast(text, i18n.t('reading.copiedToClipboard', 'Copied to clipboard!'));
         }
     }
 
@@ -718,6 +734,44 @@ class DailyTarotApp {
             result_type: '3card_spread',
             save_surface: 'result_story_1080x1920'
         });
+    }
+
+    showToast(msg) {
+        let toast = document.getElementById('tarot-toast');
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.id = 'tarot-toast';
+            toast.setAttribute('role', 'status');
+            toast.setAttribute('aria-live', 'polite');
+            toast.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#1f1638;color:#fff;padding:10px 18px;border-radius:999px;border:1px solid rgba(255,255,255,0.2);box-shadow:0 8px 24px rgba(0,0,0,0.4);z-index:9999;font-size:14px;opacity:0;transition:opacity 0.2s;pointer-events:none;max-width:90vw;text-align:center;';
+            document.body.appendChild(toast);
+        }
+        toast.textContent = msg;
+        toast.style.opacity = '1';
+        clearTimeout(toast._timer);
+        toast._timer = setTimeout(() => { toast.style.opacity = '0'; }, 2600);
+    }
+
+    copyWithToast(text, successMsg) {
+        const execCopy = () => {
+            try {
+                const ta = document.createElement('textarea');
+                ta.value = text;
+                ta.setAttribute('readonly', '');
+                ta.style.position = 'fixed';
+                ta.style.opacity = '0';
+                document.body.appendChild(ta);
+                ta.select();
+                const ok = document.execCommand('copy');
+                document.body.removeChild(ta);
+                if (ok) this.showToast(successMsg);
+            } catch (e) {}
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(() => this.showToast(successMsg)).catch(execCopy);
+        } else {
+            execCopy();
+        }
     }
 
 }
